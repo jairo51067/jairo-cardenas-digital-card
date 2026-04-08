@@ -53,7 +53,7 @@ function toggleText() {
 
 
 function mi_Cv() {
-  window.alert('Se procedera a descargar el CV. " Este CV esta actualizado V2023_11_3, Ingles - Español " ');  
+  window.alert('Se procedera a descargar el CV actualizado" ');  
 }
 
 
