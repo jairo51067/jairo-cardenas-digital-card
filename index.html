@@ -1,73 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jairo Cárdenas | Full-Stack Developer</title>
     <script src="https://kit.fontawesome.com/90933225e5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <script src="jquery-1.6.3.min.js" defer></script>
-
-    <script>
-        $(function () {
-            $("body").hide().fadeIn(3000);
-        });
-        defer</script>
-
-    <title>Mi tarjeta Jairo Cárdenas</title>
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles_2.css">
 </head>
+<body class="fade-in">
 
-<body>
-    <div class="contenedor">
+    <div class="card">
+        <header class="card-header">
+            <div class="profile-img"></div>
+        </header>
 
-        <div class="shape">
-            <div class="image"></div>
-        </div>
+        <main class="card-content">
+            <h1>Jairo Cárdenas</h1>
+            <p class="subtitle">Full-Stack Developer & Product Manager</p>
 
-        <h3>Jairo Cárdenas</h3>
-        <a href="about_in.html"><button type="button" class="css-button">about me</button></a>
-        <p class="title">Web developer</p>
-        <span class="hide" id="hideText"> - HTML - CCS - JavaScript - Wordpress - Portugues - Ingles </span>
-        <button type="button" class="css-button" id="hideText_btn">skills</button>
-        <!-- <button id="myBtn" type="button" class="css-button" onclick="mySkills()">skills</button> -->
-
-        <div class="icon_cv">
-            <p class="title">CV</p>
-            <a id="icon_btn" href="Jairo_Cardenas_CV__es426.pdf" target="_blank" onclick="mi_Cv()"><i
-                    class="fa-solid fa-print"></i></a>
-        </div>
-
-        <div class="icons_rds">
-            <P class="title">contacts</P>
-            <a href="https://www.linkedin.com/in/jairo-a-cárdenas-m-49b94b25" target="_blank"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/jairo51067" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://wa.me/+5804127055024" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-            <a href="mailto:jairo.cardenas.dev@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-
-        <div class="icons_vzla">
-            <div>
-                <!-- <i class="fa-solid fa-location-dot"></i> -->
-                <p class="title">from Venezuela</p>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">WordPress</span>
             </div>
-            <img class="bandera_vzla" src="bandera_venezuela_icon.png" alt="bandera_venezuela_icon">
-        </div>
+
+            <div class="dashboard-grid">
+                <a href="/components/projects/projects.html" class="dash-btn">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="/components/about/about_in.html" class="dash-btn">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>About Me</span>
+                </a>
+                <a href="/components/contact/contact.html" class="dash-btn primary-dash">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+
+            <div class="cv-module">
+                <p class="section-title">DOWNLOAD CV</p>
+                <div class="cv-options">
+                    <a href="/assets/doc/Jairo_Cardenas_CV__es426.pdf" target="_blank" class="cv-link">Español</a>
+                    <span class="sep">|</span>
+                    <a href="/assets/doc/Jairo_Cardenas_CV_en426.pdf" target="_blank" class="cv-link">English</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="card-footer">
+            <span>From Venezuela</span>
+            <img src="/assets/images/bandera_venezuela_icon.png" alt="VZ" class="flag">
+        </footer>
     </div>
 
-
-
-
-    <!-- <h4>Click the button to print the current page.</h4>
-    <button class="css-button" onclick="window.print()">Print this page</button> -->
-
-    <script src="script.js" defer></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-    <!-- <script src="sweetAlert.js"></script> -->
 </body>
-
 </html>

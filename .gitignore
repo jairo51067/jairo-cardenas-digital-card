@@ -11,6 +11,17 @@ out/
 *.tmp
 *.log
 *.swp
+*.bak
+*.backup
+*.old
+*.orig
+*.zip
+*.tar.gz
+*.7z
+*.exe
+*.dll
+*.iso
+
 
 .vscode/
 
@@ -27,3 +38,8 @@ Thumbs.db
 .DS_Store
 
 Tarjeta de presentacion Jairo_Cardenas.docx
+
+* .index_original.html
+* .styles_originales.css
+* .scripts_originales.js
+

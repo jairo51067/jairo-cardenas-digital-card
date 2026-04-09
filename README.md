@@ -1,30 +1,56 @@
-# Tarjeta de presentacion Jairo Cárdenas
+# 📇 Digital Business Card | Jairo Cárdenas
+> **Full-Stack Developer & Product Manager**
+> Un ecosistema minimalista, modular y de alto impacto diseñado para la conversión profesional.
 
-Vea Mi Tarjeta de presentacion: https://jairo51067.github.io/JACM_Tarjetadepresentacion_JairoCardenas/
-![Tarjete de presentacion](https://github.com/user-attachments/assets/59114a69-e4fb-49ff-ad19-15911976cdb4)
+[![Live Demo](https://img.shields.io/badge/demo-online-28a3c2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jairo51067.github.io/JACM_Tarjetadepresentacion_JairoCardenas/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-002244?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](https://github.com/jairo51067)
 
+---
 
-## Tarjeta de Presentación - Jairo Cárdenas
-Bienvenido al repositorio de mi tarjeta de presentación personal. Este proyecto está diseñado para mostrar mis habilidades como desarrollador front-end y proporcionar información sobre mí, incluyendo mis contactos y un enlace a mi currículum.
+## 🚀 El Proyecto
+Esta no es solo una tarjeta de presentación; es una **Single Page Application (SPA)** conceptual construida con una arquitectura modular. El objetivo es centralizar mi presencia digital, exhibir proyectos clave y facilitar el acceso a mi documentación técnica en una interfaz optimizada para la experiencia de usuario (UX).
 
-## Características
-•	Diseño Atractivo: Utiliza HTML, CSS y JavaScript para crear una interfaz de usuario atractiva y fácil de navegar.
-•	Interactividad: Incluye efectos de fade-in al cargar la página y un botón para mostrar u ocultar mis habilidades.
-•	Enlaces a Redes Sociales: Proporciona enlaces a mis perfiles de LinkedIn, GitHub y WhatsApp.
-•	Descarga de CV: Permite a los visitantes descargar mi currículum en formato PDF.
-•	Responsive: La tarjeta está diseñada para ser visualizada en diferentes dispositivos.
+### 🎯 Características Elite (Pro+ Features)
+* **Dashboard Interactivo:** Navegación centralizada que actúa como hub hacia mis secciones informativas y proyectos.
+* **Arquitectura Modular:** Estructura organizada por componentes (`/components/`) para facilitar el mantenimiento y la escalabilidad del código.
+* **Selector de CV Bilingüe:** Módulo dinámico para la descarga de currículums en Español e Inglés.
+* **Diseño High-End:** Estética cinemática con enfoque en alto contraste (Chiaroscuro), tipografía legible y diseño 100% responsivo.
+* **Performance Optimizada:** Construcción en **Vanilla JavaScript** (sin librerías pesadas) para garantizar una carga instantánea y fluida.
 
-## Tecnologías Utilizadas
-•	HTML5
-•	CSS3
-•	JavaScript (jQuery)
-•	Font Awesome para iconos
+---
 
-## Instalación
+## 🛠️ Stack Tecnológico
+| Capa | Tecnologías |
+| :--- | :--- |
+| **Frontend** | HTML5 Semántico, CSS3 (Variables, Grid & Flexbox) |
+| **Lógica** | JavaScript ES6+ (Manipulación de DOM & State) |
+| **Iconografía** | Font Awesome Pro Integration |
+| **Tipografía** | Inter (Google Fonts) |
+| **Despliegue** | GitHub Pages |
 
-Para visualizar la tarjeta de presentación en tu propio entorno, sigue estos pasos:
+---
+
+## 📦 Estructura del Repositorio
+El proyecto sigue un estándar de organización profesional para asegurar un flujo de trabajo limpio:
+
+```text
+├── assets/
+│   ├── css/          # Estilos globales (styles_2.css) y específicos
+│   ├── images/       # Fotografía y recursos visuales optimizados
+│   └── docs/         # Repositorio de CVs (PDF) y documentación
+├── components/
+│   ├── about/        # Módulo de información personal detallada
+│   ├── contact/      # Central de conexiones y redes sociales
+│   └── projects/     # Vitrina modular de proyectos clave
+└── index_2.html      # Punto de entrada principal (Dashboard)
+
+## 🚧 Instalación y Uso
+
+Si deseas explorar el código o replicar esta estructura:
+Clonar el repositorio:
 1.	Clona el repositorio:
-https://github.com/tu_usuario/nombre_del_repositorio.git
+git clone [https://github.com/jairo51067/JACM_Tarjetadepresentacion_JairoCardenas.git](https://github.com/jairo51067/JACM_Tarjetadepresentacion_JairoCardenas.git)
 
 2.	Abre el archivo index.html en tu navegador web preferido.
 Cómo Contribuir

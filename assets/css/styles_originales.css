@@ -1,0 +1,238 @@
+/* VARIABLES */
+:root {
+    --primary: #002244;
+    --accent: #28a3c2;
+    --bg-dark: #615e5e;
+    --white: #ffffff;
+    --text-muted: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* EFECTO ENTRADA */
+.fade-in {
+    animation: fadeInPage 1s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* LA TARJETA */
+.card {
+    background: var(--white);
+    width: 100%;
+    /* 100% en móviles */
+    max-width: 400px;
+    /* Límite en escritorio */
+    min-height: 100vh;
+    /* En móvil ocupa todo el alto */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste para escritorio: que no ocupe todo el alto y tenga bordes redondeados */
+@media (min-width: 480px) {
+    .card {
+        min-height: auto;
+        border-radius: 25px;
+        margin: 20px;
+    }
+}
+
+/* HEADER CON IMAGEN DE FONDO */
+.card-header {
+    background-image: linear-gradient(rgba(0,34,68,0.5), rgba(0,34,68,0.5)), url('/assets/images/disenyador-web.jpg');
+    background-size: cover;
+    background-position: center; /* Centra el fondo para que el diseño luzca mejor */
+    height: 200px;
+    position: relative;
+}
+
+/* FOTO DE PERFIL */
+.profile-img {
+    width: 130px; /* Un poco más grande para mejor presencia */
+    height: 130px;
+    border-radius: 50%;
+    background-image: url('/assets/images/jairo_A-febrero_2026_1.png');
+    background-size: cover;
+    background-position: center top; /* Asegura que se vea la cabeza dentro del círculo */
+    border: 3px solid var(--white);
+    position: absolute;
+    
+    /* Bajamos la foto para que no tape el arte del header */
+    top: 130px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* CONTENIDO */
+.card-content {
+    /* Aumentamos el padding superior para dar espacio a la foto bajada */
+    padding: 85px 25px 30px; 
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-top: 10px; /* Espacio extra opcional */
+}
+
+.subtitle {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.btn-primary,
+.btn-outline {
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    background: #f0f4f8;
+    color: var(--primary);
+    border: 1px solid #d1d9e0;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+}
+
+.btn-outline:hover {
+    background: #e2e8f0;
+}
+
+/* SKILLS */
+.skills-tag-cloud {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.skills-tag-cloud.show {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-tag-cloud span {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* SOCIAL */
+.section-title {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-links a i {
+    font-size: 1.6rem;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.social-links a:hover i {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.card-footer {
+    padding: 20px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.flag {
+    width: 22px;
+    height: auto;
+}
