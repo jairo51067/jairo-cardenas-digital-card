@@ -179,30 +179,64 @@
     color: var(--text-muted);
 }
 
-/* SECCIÓN PORTAFOLIO EXTERNO */
+/* SECCIÓN DE PORTAFOLIO EXTERNO (Mejorada) */
 .external-portfolio {
-    margin-top: 10px;
+    margin-top: 10px; /* Reducimos el margen superior para que quepa mejor en pantallas cortas */
     text-align: center;
-    padding: 20px;
-    background: #f0f7f9;
+    padding: 25px 20px;
+    background: #f0f7f9; /* Azul suave de fondo */
     border-radius: 20px;
-    border: 1px dashed var(--accent);
+    border: 1px dashed var(--accent); /* Borde discontinuo elegante */
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.external-portfolio:hover {
+    background: #e6f2f5;
+    border-style: solid; /* El borde se vuelve sólido al pasar el mouse */
+}
+
+.mini-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
 }
 
 .btn-full-portfolio {
-    display: flex;
+    display: inline-flex; /* Cambiado a inline-flex para que no ocupe todo el ancho si no es necesario */
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     background: var(--primary);
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
-    border-radius: 12px;
+    padding: 14px 25px;
+    border-radius: 14px;
     font-weight: 700;
     font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 15px rgba(0, 34, 68, 0.15);
 }
 
+.btn-full-portfolio:hover {
+    background: var(--accent);
+    transform: scale(1.05); /* Efecto de crecimiento pro */
+    box-shadow: 0 12px 20px rgba(40, 163, 194, 0.3);
+    color: white;
+}
+
+.btn-full-portfolio i {
+    font-size: 0.85rem;
+    transition: transform 0.3s;
+}
+
+.btn-full-portfolio:hover i {
+    transform: rotate(-45deg); /* El icono de flecha apunta hacia arriba al hacer hover */
+}
 /* FOOTER */
 .card-footer {
     padding: 20px;
