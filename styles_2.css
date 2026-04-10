@@ -82,7 +82,7 @@ body {
 
 /* CONTENIDO */
 .card-content {
-    padding: 75px 25px 0px; 
+    padding: 75px 25px 30px; 
     text-align: center;
     flex-grow: 1;
 }
@@ -211,4 +211,55 @@ h1 {
 .flag {
     width: 20px;
     height: auto;
+}
+
+/* ... (Tus estilos anteriores de cv-module) ... */
+
+.cv-module {
+    margin-top: 10px;
+    padding: 15px 15px 10px; /* Ajustado el padding inferior */
+    background: var(--bg-light);
+    border-radius: 15px;
+    border: 1px solid #edf2f7; /* Un borde sutil para definir el área */
+}
+
+/* ESTILO DEL AVISO DE PRIVACIDAD */
+.privacy-notice {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+}
+
+.privacy-notice i {
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-top: 2px;
+}
+
+.privacy-notice p {
+    font-size: 0.65rem;
+    color: #888;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+/* Mejora visual para los links de CV */
+.cv-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.85rem;
+    transition: 0.2s;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.cv-link:hover { 
+    background: var(--white);
+    color: var(--primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
