@@ -23,88 +23,104 @@ body {
     min-height: 100vh;
 }
 
+/* EFECTO DE ENTRADA */
 .fade-in {
     animation: fadeIn 0.6s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
+    from { opacity: 0; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
 }
 
+/* DISEÑO BASE (MÓVIL - FULL SCREEN) */
 .card-contact {
     background: var(--white);
-    width: 380px;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    width: 100%;
+    min-height: 100vh;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.nav-header { margin-bottom: 30px; }
+/* AJUSTE PARA ESCRITORIO */
+@media (min-width: 480px) {
+    .card-contact {
+        width: 380px;
+        min-height: auto;
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        margin: 20px;
+    }
+}
+
+.nav-header { 
+    margin-bottom: 30px; 
+}
 
 .back-link {
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--primary);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    opacity: 1;
+    transform: translateX(-3px);
 }
 
 .contact-header { margin-bottom: 35px; }
 
 .contact-header h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--primary);
     margin-bottom: 10px;
 }
 
 .contact-header p {
     color: var(--text-light);
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-/* Items de Contacto */
+/* LISTADO DE CONTACTO */
 .contact-methods {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex-grow: 1; /* Empuja el footer hacia abajo en móvil */
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 18px;
     border-radius: 16px;
     text-decoration: none;
     background: #f8fafb;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    border: 1px solid #eee;
+    width: 100%;
 }
 
 .icon-box {
-    width: 45px;
-    height: 45px;
-    min-width: 45px; /* Evita que se encoja si el texto es largo */
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     background: var(--white);
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.contact-item {
-    display: flex;
-    align-items: center; /* Alineación vertical al centro */
-    padding: 15px;
-    border-radius: 16px;
-    text-decoration: none;
-    background: #f8fafb;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .details {
@@ -114,14 +130,15 @@ body {
 
 .details span {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-main);
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .details small {
     color: var(--text-light);
     font-size: 0.8rem;
+    word-break: break-all; /* Evita que correos largos rompan el diseño */
 }
 
 .arrow {
@@ -130,12 +147,12 @@ body {
     transition: transform 0.3s;
 }
 
-/* Hovers */
+/* HOVERS */
 .contact-item:hover {
-    transform: translateX(5px);
+    transform: translateX(8px);
     background: var(--white);
     border-color: var(--accent);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .contact-item:hover .arrow {
@@ -143,23 +160,24 @@ body {
     color: var(--accent);
 }
 
+/* Efecto especial para WhatsApp */
 .contact-item.highlight:hover .icon-box {
     background: var(--whatsapp);
     color: white;
 }
 
-/* Footer */
+/* FOOTER */
 .contact-footer {
     margin-top: 40px;
     text-align: center;
     border-top: 1px solid #edf2f7;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .contact-footer p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-main);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .contact-footer small {
