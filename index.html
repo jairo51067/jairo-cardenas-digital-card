@@ -2,25 +2,71 @@
 <html lang="es">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Jairo Cárdenas | Full-Stack Developer</title>
-
-   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/public/favicon/favicon.svg"/>
-
-   <!-- Fonts & Icons -->
-   <script src="https://kit.fontawesome.com/90933225e5.js" crossorigin="anonymous"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-
-   <!-- Styles -->
-   <link rel="stylesheet" href="src/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jairo Cárdenas | Full-Stack Developer</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/90933225e5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_2.css">
 </head>
 
 <body class="fade-in">
-   <main id="app">
-      </main>
 
-   <script type="module" src="src/app/main.js"></script>
+    <div class="card">
+        <header class="card-header">
+            <div class="profile-img"></div>
+        </header>
+
+        <main class="card-content">
+            <h1>Jairo Cárdenas</h1>
+            <p class="subtitle">Full-Stack Developer & Product Manager</p>
+
+            <div class="skills-container">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">React</span>
+                <!-- <span class="skill-tag">WordPress</span> -->
+            </div>
+
+            <div class="dashboard-grid">
+                <a href="projects.html" class="dash-btn">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="about_in.html" class="dash-btn">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>About Me</span>
+                </a>
+                <a href="contact.html" class="dash-btn primary-dash">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+
+            <div class="cv-module">
+                <p class="section-title">DOWNLOAD CV</p>
+                <div class="cv-options">
+                    <a href="assets/doc/Jairo_Cardenas_CV__es426.pdf" target="_blank" class="cv-link">Español</a>
+                    <span class="sep">|</span>
+                    <a href="assets/doc/Jairo_Cardenas_CV_en426.pdf" target="_blank" class="cv-link">English</a>
+                </div>
+                <div class="privacy-notice">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>Versión simplificada para protección de datos. Para detalles sensibles, favor contactar
+                        directamente.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="card-footer">
+            <span>From Venezuela</span>
+            <img src="assets/images/bandera_venezuela_icon.png" alt="VZ" class="flag">
+        </footer>
+    </div>
+
 </body>
-</html> 
+
+</html>
