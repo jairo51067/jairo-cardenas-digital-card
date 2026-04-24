@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Jairo Cárdenas</title>
-    <script src="https://kit.fontawesome.com/90933225e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body class="fade-in">
+// src/features/contact/contact.render.js
 
-    <div class="card-contact">
+export function renderContactPage() {
+    const container = document.getElementById('app');
+
+    container.innerHTML = `
+    <div class="card-contact fade-in">
         <nav class="nav-header">
-            <a href="index.html" class="back-link">
+            <a href="#" id="btn-home-contact" class="nav-link">
                 <i class="fa-solid fa-house"></i> Home
             </a>
         </nav>
@@ -23,7 +17,7 @@
         </header>
 
         <div class="contact-methods">
-            <a href="https://wa.me/584127055024" class="contact-item highlight" target="_blank">
+            <a href="https://wa.me/584127055024" class="contact-item" target="_blank">
                 <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
                 <div class="details">
                     <span>WhatsApp</span>
@@ -56,6 +50,5 @@
             <small>Disponibilidad para proyectos remotos</small>
         </footer>
     </div>
-
-</body>
-</html>
+    `;
+}
