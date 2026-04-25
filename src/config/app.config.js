@@ -17,5 +17,6 @@ export const config = {
             isNew: false,
             icon: 'fa-chart-line'
         }
+        
     ]
-};
+}; 

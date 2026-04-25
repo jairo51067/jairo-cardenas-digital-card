@@ -18,13 +18,17 @@ export function renderProfile() {
                 <span class="skill-tag">HTML5</span>
                 <span class="skill-tag">CSS3</span>
                 <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React - Vite</span>
                 <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">React</span>
+                <span class="skill-tag">NoSQL</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git - GitHub</span>
+
             </div>
 
             <nav class="dashboard-grid">
                 <div class="badge-wrapper">
-                    <span class="badge-new">NUEVO ARL 2026</span>
+                    <span class="badge-new">NUEVO ABRIL 2026</span>
                     <a href="#" id="btn-projects" class="dash-btn">
                         <i class="fa-solid fa-code"></i>
                         <span>Projects</span>
@@ -49,6 +53,10 @@ export function renderProfile() {
                     <span class="sep">|</span>
                     <a href="src/assets/doc/Jairo_Cardenas_CV_en426.pdf" target="_blank" class="cv-link">English</a>
                 </div>
+                <div class="security-note">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>Versión simplificada por seguridad de datos. Para detalles técnicos adicionales o referencias, no dudes en contactarme.</p>
+    </div>
             </section>
         </section>
 
@@ -58,4 +66,4 @@ export function renderProfile() {
         </footer>
     </article>
   `;
-} 
+}

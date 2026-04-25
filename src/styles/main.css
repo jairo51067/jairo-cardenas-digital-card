@@ -85,7 +85,7 @@ body {
 
 /* CONTENIDO */
 .card-content {
-    padding: 75px 25px 20px; 
+    padding: 75px 25px 0px 25px; 
     text-align: center;
     flex-grow: 1;
 }
@@ -170,7 +170,8 @@ h1 {
     
     /* Cambios clave para la elegancia */
     flex-direction: row; /* Icono y texto uno al lado del otro */
-    justify-content: center; /* Centrado horizontal perfecto */
+    /* justify-content: center; /* Centrado horizontal perfecto */
+    justify-content: left; /* alineado a la derecha */
     align-items: center; /* Centrado vertical perfecto */
     gap: 12px; /* Espacio ideal entre icono y texto */
     
@@ -321,15 +322,23 @@ h1 {
     position: absolute;
     top: -8px;
     right: -5px;
-    background: linear-gradient(135deg, #28a3c2 0%, #002244 100%);
+    /* background: linear-gradient(135deg, #28a3c2 0%, #002244 100%); */
+    /* background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Rojo vibrante a coral */
+    /* O esta versión más profunda: */
+    /* background: linear-gradient(45deg, #f01111, #a30000); */
+    /* O esta versión El Gradiente "Sunset Burn" (Alta Energía): */
+    background: linear-gradient(45deg, #e52d27, #b31217); 
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    /* */
     color: white;
     font-size: 0.6rem;
     font-weight: 800;
     padding: 2px 8px;
     border-radius: 6px; /* Menos redondeado para que se vea más técnico */
     z-index: 20;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.3);
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.2); */
+    box-shadow: 0 2px 8px rgba(240, 17, 17, 0.3); /* Sombra rojiza sutil */
+    /* border: 1px solid rgba(255,255,255,0.3); */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     position: absolute;
@@ -1018,4 +1027,43 @@ blockquote {
 
 .contact-footer small {
     color: var(--text-light);
+}
+
+.cv-module {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.cv-options {
+    margin-bottom: 12px;
+}
+
+/* El mensaje de seguridad */
+.security-note {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    max-width: 280px; /* Para que el texto no se extienda mucho */
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.security-note i {
+    font-size: 0.75rem;
+    color: var(--accent); /* El azul turquesa para que sea amigable */
+    margin-top: 3px;
+}
+
+.security-note p {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    line-height: 1.3;
+    text-align: left;
+}
+
+/* Efecto hover opcional para transparencia */
+.security-note:hover {
+    opacity: 1;
+    transition: 0.3s;
 }
