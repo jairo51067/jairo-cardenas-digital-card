@@ -1,4 +1,4 @@
-:root {
+::root {
     --primary: #002244;
     --accent: #28a3c2;
     --whatsapp: #25d366;
@@ -17,10 +17,10 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-body);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Eliminamos el centrado forzado del body para que no choque con el 100% en móvil */
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* EFECTO DE ENTRADA */
@@ -33,26 +33,35 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* DISEÑO BASE (MÓVIL - FULL SCREEN) */
+/* DISEÑO BASE (MÓVIL - 100% REAL) */
 .card-contact {
     background: var(--white);
     width: 100%;
-    min-height: 100vh;
-    padding: 30px;
+    /* Usamos dvh (dynamic viewport height) para evitar problemas con la barra de navegación del móvil */
+    min-height: 100dvh; 
+    padding: 25px; /* Un poco menos de padding en móvil para ganar espacio */
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-/* AJUSTE PARA ESCRITORIO */
+/* AJUSTE PARA ESCRITORIO (> 480px) */
 @media (min-width: 480px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
     .card-contact {
         width: 380px;
-        min-height: auto;
-        /* border-radius: 24px; */
+        min-height: 620px; /* Altura fija o auto para que parezca tarjeta */
+        height: auto;
+        border-radius: 24px;
         box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        margin: 20px;
     }
 }
+
 
 .nav-header { 
     margin-bottom: 30px; 
@@ -183,4 +192,26 @@ body {
 .contact-footer small {
     color: var(--text-light);
     font-size: 0.75rem;
+}
+
+/* Ajuste del CV Module que agregamos antes */
+.cv-module {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fdfdfd;
+    border-radius: 16px;
+    border: 1px dashed #eee;
+}
+
+.security-note {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    opacity: 0.8;
+}
+
+.security-note p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    line-height: 1.4;
 }
