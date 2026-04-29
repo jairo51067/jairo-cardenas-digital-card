@@ -11,9 +11,12 @@ Una aplicación web **orientada a componentes** y desarrollada con **Vanilla Jav
 
 ---
 
+---
+
 ## 🏛️ Arquitectura del Proyecto
 
 El sistema está diseñado bajo un enfoque de **Feature-Based Architecture** (Arquitectura basada en características), lo que permite que cada sección (Perfil, Proyectos, Contacto) funcione de manera independiente y sea fácil de mantener.
+
 
 ### Estructura de Módulos (CodeViz Logic)
 ```mermaid
@@ -34,27 +37,8 @@ graph TD
         Storage[Local Storage Service]
         Components[UI Components]
     end
-
-
-### 🛠️ Especificaciones Técnicas
-Modularidad: Uso de módulos ES6 para organizar la lógica de negocio y la interfaz.
-
-UI Dinámica: Los componentes se generan mediante funciones de renderizado (renderApp, createCard, createButton), permitiendo una interfaz reactiva.
-
-Persistencia: Implementación de un Storage Service para gestionar datos en el navegador mediante localStorage.
-
-Clean Code: Separación estricta entre la configuración de datos (app.config.js) y la lógica de visualización.
-
-
-📂 Organización del Código
-
-src/
-├── app/            # Inicialización y orquestación (main.js, app.js)
-├── components/     # Componentes de UI atómicos y reutilizables
-├── config/         # Configuración global y constantes
-├── features/       # Módulos específicos por funcionalidad
-├── services/       # Lógica de persistencia y servicios externos
-└── index.html      # Punto de entrada de la aplicación
+```
+--- 
 
 Aquí tienes el contenido definitivo para tu README.md. He optimizado la estructura para que se vea impecable en GitHub, utilizando iconos, secciones claras y resaltando la arquitectura técnica que muestra tu diagrama.
 
@@ -97,7 +81,10 @@ graph TD
         Storage[Local Storage Service]
         Components[UI Components]
     end
-🛠️ Especificaciones Técnicas
+```
+---
+
+### 🛠️ Especificaciones Técnicas
 Modularidad: Uso de módulos ES6 para organizar la lógica de negocio y la interfaz.
 
 UI Dinámica: Los componentes se generan mediante funciones de renderizado (renderApp, createCard, createButton), permitiendo una interfaz reactiva.
@@ -106,7 +93,8 @@ Persistencia: Implementación de un Storage Service para gestionar datos en el n
 
 Clean Code: Separación estricta entre la configuración de datos (app.config.js) y la lógica de visualización.
 
-📂 Organización del Código
+### 📂 Organización del Código
+
 Plaintext
 src/
 ├── app/            # Inicialización y orquestación (main.js, app.js)
@@ -115,7 +103,9 @@ src/
 ├── features/       # Módulos específicos por funcionalidad
 ├── services/       # Lógica de persistencia y servicios externos
 └── index.html      # Punto de entrada de la aplicación
-🚀 Instalación y Desarrollo
+
+
+### 🚀 Instalación y Desarrollo
 Si deseas replicar este entorno localmente:
 
 Clona el repositorio:
@@ -129,7 +119,7 @@ cd jairo-cardenas-digital-card
 Ejecución:
 Debido al uso de módulos de JavaScript, se recomienda abrir el proyecto utilizando un servidor local (como Live Server en VS Code).
 
-👨‍💻 Sobre el Autor
+### 👨‍💻 Sobre el Autor
 Jairo Cárdenas Desarrollador Web enfocado en la creación de soluciones escalables y diseño centrado en el usuario.
 
 Desarrollado con pasión por el código y el diseño limpio.
