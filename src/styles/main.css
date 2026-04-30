@@ -90,7 +90,7 @@ body {
         url('../../public/images/disenyador-web.webp');
     background-size: cover;
     background-position: center;
-    height: 150px;
+    height: 130px;
     position: relative;
 
     /* Sugerencia adicional para asegurar que la foto de perfil resalte */
@@ -110,7 +110,7 @@ body {
     background-position: center top;
     border: 1px solid var(--white);
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
