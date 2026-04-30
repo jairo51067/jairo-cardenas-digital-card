@@ -11,7 +11,7 @@ export function renderProjectsPage() {
                 </nav>
 
                 <h1 class="projects-main-title">Key Projects</h1>
-                <p class="projects-subtitle">Soluciones digitales con impacto real y arquitectura escalable.</p>
+                <p class="projects-subtitle">Soluciones digitales con impacto real, arquitectura simple y escalable.</p>
                 
                 <div class="projects-list-container">
                     <div class="project-card">
@@ -20,7 +20,7 @@ export function renderProjectsPage() {
                             <div class="project-icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
                             <div class="project-info">
                                 <h3 class="project-title">VendeMás E-commerce</h3>
-                                <p class="project-desc">Lanzamiento 2026 - Solución de ventas online.</p>
+                                <p class="project-desc">🛍️ Tu tienda online con WhatsApp integrado en minutos. - Solución de ventas online.</p>
                             </div>
                             <a href="https://e-commerce-2026-peach.vercel.app/" class="project-link-arrow"><i class="fa-solid fa-circle-arrow-right"></i></a>
                         </div>
@@ -30,10 +30,10 @@ export function renderProjectsPage() {
                         <div class="project-card-header">
                             <div class="project-icon-box"><i class="fa-solid fa-chart-line"></i></div>
                             <div class="project-info">
-                                <h3 class="project-title">Metabolic App</h3>
-                                <p class="project-desc">Plataforma multiusuario para métricas metabólicas.</p>
+                                <h3 class="project-title">PayControl App</h3>
+                                <p class="project-desc">💰 Sistema de gestión de pagos y deudas de clientes.</p>
                             </div>
-                            <a href="https://jairo51067.github.io/ControlDePeso/" class="project-link-arrow"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://paycontrol-app.vercel.app/" class="project-link-arrow"><i class="fa-solid fa-circle-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
