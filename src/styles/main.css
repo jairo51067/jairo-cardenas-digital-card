@@ -9,6 +9,13 @@
     --bg-body: #f4f7f6;
     --text-main: #2c3e50;
     --text-light: #5a6c7d;
+    --primary-blue: #0047AB;
+    /* Azul Cobalto de la foto */
+    --electric-blue: #00D4FF;
+    /* Azul Cian de la luz de acento */
+    --deep-black: #0a0a0a;
+    /* Negro profundo de la camisa */
+    --soft-gray: #f8f9fa;
 }
 
 * {
@@ -32,8 +39,13 @@ body {
 }
 
 @keyframes fadeInPage {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* LA TARJETA (Ajustada para móvil 100%) */
@@ -58,6 +70,7 @@ body {
 }
 
 /* HEADER */
+/*
 .card-header {
     background-image: linear-gradient(rgba(0,34,68,0.5), rgba(0,34,68,0.5)), url('../../public/images/disenyador-web.webp');
     background-size: cover;
@@ -65,27 +78,48 @@ body {
     height: 150px;
     position: relative;
 }
+*/
+
+.card-header {
+    background-image:
+        linear-gradient(rgba(0, 71, 171, 0.9),
+            /* Azul cobalto vibrante con opacidad al 90% */
+            rgba(0, 0, 0, 0.9)
+            /* Transición a negro profundo en la base */
+        ),
+        url('../../public/images/disenyador-web.webp');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    position: relative;
+
+    /* Sugerencia adicional para asegurar que la foto de perfil resalte */
+    border-bottom: 2px solid #00D4FF;
+    /* Una línea fina de luz eléctrica */
+}
+
+
 
 /* FOTO DE PERFIL (Bajada para que no se corte la cabeza) */
 .profile-img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    background-image: url('../../public/images/jairo_A-febrero_2026_1.webp');
+    background-image: url('../../public/images/jairo_a-mayo_2026_1.webp');
     background-size: cover;
     background-position: center top;
-    border: 4px solid var(--white);
+    border: 1px solid var(--white);
     position: absolute;
-    top: 80px; 
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
 /* CONTENIDO */
 .card-content {
-    padding: 75px 25px 0px 25px; 
+    padding: 75px 25px 0px 25px;
     text-align: center;
     flex-grow: 1;
 }
@@ -97,10 +131,33 @@ h1 {
 }
 
 .subtitle {
-    color: var(--accent);
-    font-weight: 500;
+    /* color: var(--accent); */
+    color: #2980b9;
+    font-weight: 700;
     font-size: 0.9rem;
     margin-bottom: 18px;
+}
+
+.value-proposition {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 3px solid #3498db;
+    /* Un toque de color para llamar la atención */
+    background: rgba(52, 152, 219, 0.05);
+    /* Un fondo sutil */
+    border-radius: 0 8px 8px 0;
+}
+
+.value-proposition p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    font-style: italic;
+}
+
+.value-proposition strong {
+    color: #2980b9;
+    font-weight: 600;
 }
 
 /* SKILLS TAGS */
@@ -129,7 +186,8 @@ h1 {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-bottom: 20px;
-    padding-top: 12px; /* ¡ESTO DA EL ESPACIO PARA QUE EL BADGE RESPIRE! */
+    padding-top: 12px;
+    /* ¡ESTO DA EL ESPACIO PARA QUE EL BADGE RESPIRE! */
 }
 
 .dash-btn {
@@ -138,71 +196,140 @@ h1 {
     align-items: center;
     padding: 15px;
     background: var(--white);
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
+    border: 1px solid rgba(0, 71, 171, 0.1);
+    /* Borde sutil con el azul primario */
     border-radius: 16px;
     text-decoration: none;
-    color: var(--primary);
-    transition: 0.3s ease;
-    height: 100%; /* Obliga a todos los botones a llenar su celda del grid */
-    min-height: 90px; /* Ajusta este valor según el tamaño que quieras que tengan */
-    justify-content: center; /* Centra el icono y el texto verticalmente */
+    /* color: var(--primary); */
+    color: var(--primary-blue);
+    /* Texto en azul cobalto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    /* Sombra muy ligera */
+    /* transition: 0.3s ease; */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transición más fluida */
+    height: 100%;
+    /* Obliga a todos los botones a llenar su celda del grid */
+    min-height: 90px;
+    /* Ajusta este valor según el tamaño que quieras que tengan */
+    justify-content: center;
+    /* Centra el icono y el texto verticalmente */
 }
 
-.dash-btn i { font-size: 1.2rem; margin-bottom: 8px; }
-.dash-btn span { font-size: 0.8rem; font-weight: 600; }
+/* .dash-btn i { font-size: 1.2rem; margin-bottom: 8px; } */
+/* El icono ahora tiene un color más vibrante */
 
-.dash-btn:hover {
+.dash-btn i {
+    font-size: 1.2rem;
+    /* Un poco más grande para mejor balance */
+    margin-bottom: 10px;
+    /* color: var(--electric-blue); */
+      color: #2980b9;
+    transition: transform 0.3s ease;
+}
+
+/* Ajuste para el texto (usando em/italic como en el JS anterior) */
+.dash-btn em { 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dash-btn span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* .dash-btn:hover {
     border-color: var(--accent);
     background: #fdfdfe;
     transform: translateY(-3px);
+} */
+
+/* --- ESTADO HOVER (VIDA) --- */
+
+.dash-btn:hover {
+    /* border-color: var(--electric-blue); */
+    border-color: var(--primary); 
+    background: linear-gradient(135deg, #ffffff 0%, var(--soft-gray) 100%);
+    transform: translateY(-2px); /* Elevación un poco más pronunciada */
+    box-shadow: 0 10px 20px rgba(0, 71, 171, 0.1); /* Sombra con el tono azul de la marca */
+    color: var(--deep-black);
+}
+
+.dash-btn:hover i {
+    transform: scale(1.15); /* El icono crece ligeramente al pasar el mouse */
+    color: var(--primary-blue);
 }
 
 /* Botón de Contacto Destacado */
 /* ==========================================================================
    MEJORA DEFINITIVA BOTÓN LET'S TALK (Basado en Captura_2)
    ========================================================================== */
-
 /* 1. Ajuste del Contenedor Principal (Grid) */
 .primary-dash {
-    grid-column: span 2; /* Sigue ocupando todo el ancho */
-    background: var(--primary);
+    grid-column: span 2;
+    /* Sigue ocupando todo el ancho */
+    /* background: var(--primary); */
+    background: var(--primary-blue);
     color: white;
-    
+
     /* Cambios clave para la elegancia */
-    flex-direction: row; /* Icono y texto uno al lado del otro */
+    flex-direction: row;
+    /* Icono y texto uno al lado del otro */
     /* justify-content: center; /* Centrado horizontal perfecto */
-    justify-content: left; /* alineado a la derecha */
-    align-items: center; /* Centrado vertical perfecto */
-    gap: 12px; /* Espacio ideal entre icono y texto */
-    
+    justify-content: left;
+    /* alineado a la derecha */
+    align-items: center;
+    /* Centrado vertical perfecto */
+    gap: 12px;
+    /* Espacio ideal entre icono y texto */
+
     /* Dimensiones refinadas */
-    padding: 12px 20px; /* Reducimos el padding vertical */
-    height: 50px; /* Definimos una altura fija y elegante (no gigante) */
-    min-height: auto; /* Cancelamos cualquier min-height heredado */
-    
+    padding: 12px 20px;
+    /* Reducimos el padding vertical */
+    height: 50px;
+    /* Definimos una altura fija y elegante (no gigante) */
+    min-height: auto;
+    /* Cancelamos cualquier min-height heredado */
+
     border: none;
-    box-shadow: 0 4px 10px rgba(0,34,68,0.15); /* Sombra sutil para darle profundidad */
+    box-shadow: 0 4px 10px rgba(0, 34, 68, 0.15);
+    /* Sombra sutil para darle profundidad */
 }
 
 /* 2. Ajuste del Icono */
 .primary-dash i {
-    font-size: 1.1rem; /* Icono un poco más pequeño y estilizado */
-    color: white;
-    margin-bottom: 0; /* Cancelamos el margen inferior de los botones cuadrados */
+    font-size: 1.1rem;
+    /* Icono un poco más pequeño y estilizado */
+    /* color: white; */
+    /* color: var(--electric-blue); */
+    margin-bottom: 0;
+    /* Cancelamos el margen inferior de los botones cuadrados */
 }
 
 /* 3. Ajuste del Texto */
 .primary-dash span {
-    font-size: 0.9rem; /* Texto un poco más grande y legible */
+    font-size: 0.9rem;
+    /* Texto un poco más grande y legible */
     font-weight: 600;
     color: white;
 }
 
 /* 4. Efecto Hover Refinado */
 .primary-dash:hover {
-    background: var(--accent); /* El cambio de color que ya tenías, que está muy bien */
-    transform: translateY(-2px); /* Un pequeño levantamiento al pasar el mouse */
-    box-shadow: 0 6px 15px rgba(0,34,68,0.25);
+    /* background: var(--accent); */
+    /* El cambio de color que ya tenías, que está muy bien */
+    transform: translateY(-2px);
+    /* Un pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 34, 68, 0.25);
+
+    background: var(--deep-black);
+    border-color: var(--electric-blue);
 }
 
 /* MODULO CV */
@@ -226,9 +353,9 @@ h1 {
     justify-content: center;
     gap: 15px;
     align-items: center;
-}.primary-dash
+}
 
-.cv-link {
+.primary-dash .cv-link {
     text-decoration: none;
     font-weight: 700;
     color: var(--accent);
@@ -236,8 +363,13 @@ h1 {
     transition: 0.2s;
 }
 
-.cv-link:hover { color: var(--primary); }
-.sep { color: #ccc; }
+.cv-link:hover {
+    color: var(--primary);
+}
+
+.sep {
+    color: #ccc;
+}
 
 /* FOOTER */
 .card-footer {
@@ -260,10 +392,12 @@ h1 {
 
 .cv-module {
     margin-top: 10px;
-    padding: 15px 15px 10px; /* Ajustado el padding inferior */
+    padding: 15px 15px 10px;
+    /* Ajustado el padding inferior */
     background: var(--bg-light);
     border-radius: 15px;
-    border: 1px solid #edf2f7; /* Un borde sutil para definir el área */
+    border: 1px solid #edf2f7;
+    /* Un borde sutil para definir el área */
 }
 
 /* ESTILO DEL AVISO DE PRIVACIDAD */
@@ -301,55 +435,61 @@ h1 {
     border-radius: 8px;
 }
 
-.cv-link:hover { 
+.cv-link:hover {
     background: var(--white);
     color: var(--primary);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .badge-wrapper {
     position: relative;
-    display: block; /* Cambiamos de flex a block */
+    display: block;
+    /* Cambiamos de flex a block */
     width: 100%;
 }
 
 .badge-wrapper .dash-btn {
-    height: 100%; /* Obliga al botón a ser idéntico en altura al de 'About Me' */
+    height: 100%;
+    /* Obliga al botón a ser idéntico en altura al de 'About Me' */
     width: 100%;
 }
 
 .badge-new {
     position: absolute;
-    top: -8px;
+    top: -10px;
     right: -5px;
     /* background: linear-gradient(135deg, #28a3c2 0%, #002244 100%); */
     /* background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Rojo vibrante a coral */
     /* O esta versión más profunda: */
     /* background: linear-gradient(45deg, #f01111, #a30000); */
     /* O esta versión El Gradiente "Sunset Burn" (Alta Energía): */
-    background: linear-gradient(45deg, #e52d27, #b31217); 
+    background: linear-gradient(45deg, #e52d27, #b31217);
     border: 1px solid rgba(255, 255, 255, 0.8);
     /* */
     color: white;
     font-size: 0.6rem;
     font-weight: 800;
     padding: 2px 8px;
-    border-radius: 6px; /* Menos redondeado para que se vea más técnico */
+    border-radius: 6px;
+    /* Menos redondeado para que se vea más técnico */
     z-index: 20;
     /* box-shadow: 0 4px 6px rgba(0,0,0,0.2); */
-    box-shadow: 0 2px 8px rgba(240, 17, 17, 0.3); /* Sombra rojiza sutil */
+    box-shadow: 0 2px 8px rgba(240, 17, 17, 0.3);
+    /* Sombra rojiza sutil */
     /* border: 1px solid rgba(255,255,255,0.3); */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     position: absolute;
-    
-    
+
+
     z-index: 20;
-    transition: none !important; /* Desactivamos transiciones propias para evitar saltos */
+    transition: none !important;
+    /* Desactivamos transiciones propias para evitar saltos */
 }
 
 .badge-new {
-    transform: translateY(0) !important; /* !important asegura que esta regla gane */
+    transform: translateY(0) !important;
+    /* !important asegura que esta regla gane */
 }
 
 /* ==========================================================================
@@ -371,18 +511,23 @@ h1 {
     z-index: 20;
     transition: 0.3s;
 }
-.volver-btn:hover { opacity: 0.8; }
+
+.volver-btn:hover {
+    opacity: 0.8;
+}
 
 /* Contenedor de la vista de proyectos */
 .projects-view {
     padding: 30px 20px;
-    text-align: left; /* Alineación a la izquierda */
+    text-align: left;
+    /* Alineación a la izquierda */
 }
 
 /* Nav superior */
 .nav-header {
     margin-bottom: 25px;
 }
+
 .nav-link {
     color: var(--primary);
     text-decoration: none;
@@ -400,6 +545,7 @@ h1 {
     margin-bottom: 8px;
     font-weight: 800;
 }
+
 .projects-subtitle {
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -414,14 +560,16 @@ h1 {
     /* border-radius: 16px; */
     padding: 20px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: 0.3s;
-    transform: translateY(0) !important; /* !important asegura que esta regla gane */
+    transform: translateY(0) !important;
+    /* !important asegura que esta regla gane */
 }
-    
+
 .project-card:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    transform: translateY(0) !important; /* !important asegura que esta regla gane */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(0) !important;
+    /* !important asegura que esta regla gane */
 }
 
 
@@ -441,6 +589,7 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
 .project-main-icon {
     font-size: 1.4rem;
     color: var(--primary);
@@ -449,12 +598,14 @@ h1 {
 .project-info {
     flex-grow: 1;
 }
+
 .project-title {
     font-size: 1.1rem;
     color: var(--primary);
     margin-bottom: 4px;
     font-weight: 700;
 }
+
 .project-desc {
     font-size: 0.8rem;
     color: var(--text-muted);
@@ -468,6 +619,7 @@ h1 {
     gap: 6px;
     flex-wrap: wrap;
 }
+
 .project-tags .tag {
     background: var(--bg-light);
     color: var(--primary);
@@ -483,7 +635,8 @@ h1 {
     font-size: 1.2rem;
     padding: 5px;
     text-decoration: none;
-    align-self: center; /* Centrar verticalmente la flecha */
+    align-self: center;
+    /* Centrar verticalmente la flecha */
 }
 
 /* Footer Proyectos */
@@ -495,15 +648,32 @@ h1 {
     background: #fafafa;
     border-top: 1px solid #edf2f7;
 }
-.projects-footer a { color: var(--primary); text-decoration: none; margin-left: 5px; }
+
+.projects-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-left: 5px;
+}
 
 /* Efecto de entrada suave */
-.fade-in { animation: fadeInPage 0.5s ease-in-out; }
-@keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+.fade-in {
+    animation: fadeInPage 0.5s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* Aviso Building the Showcase */
 .building-notice {
-    background-color: #fff9db; /* Amarillo muy suave */
+    background-color: #fff9db;
+    /* Amarillo muy suave */
     border: 1px solid #ffe066;
     border-radius: 16px;
     padding: 15px;
@@ -561,7 +731,7 @@ h1 {
     text-decoration: none;
     font-weight: 700;
     font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(0,34,68,0.3);
+    box-shadow: 0 4px 15px rgba(0, 34, 68, 0.3);
 }
 
 /* Footer GitHub */
@@ -651,7 +821,8 @@ h1 {
 }
 
 .back-link {
-    color: #28a3c2 !important; /* El azul claro de tu marca */
+    color: #28a3c2 !important;
+    /* El azul claro de tu marca */
     text-decoration: none !important;
     font-weight: 600;
     font-size: 0.9rem;
@@ -674,7 +845,8 @@ h1 {
 /* El Botón "Get in Touch" / "Ver Contacto" Estilo Captura 8 */
 .btn-primary-about {
     display: inline-block;
-    background-color: #002244 !important; /* Azul Marino Oscuro */
+    background-color: #002244 !important;
+    /* Azul Marino Oscuro */
     color: white !important;
     text-decoration: none !important;
     padding: 12px 40px;
@@ -732,24 +904,28 @@ blockquote {
     align-items: center;
     font-size: 1.3rem;
     color: #002244;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-item:hover {
     transform: translateX(8px);
     border-color: #28a3c2;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-item.highlight:hover .icon-box {
-    background: #25d366; /* Color WhatsApp */
+    background: #25d366;
+    /* Color WhatsApp */
     color: white;
 }
 
 /* Limpieza de links para que no se vean como en la Captura 12 */
-.contact-item, .back-link {
-    text-decoration: none !important; /* Quita el subrayado */
-    color: inherit; /* Evita el color azul del navegador */
+.contact-item,
+.back-link {
+    text-decoration: none !important;
+    /* Quita el subrayado */
+    color: inherit;
+    /* Evita el color azul del navegador */
 }
 
 /* Contenedor principal para centrar como en la Captura 11 */
@@ -788,7 +964,7 @@ blockquote {
     align-items: center;
     font-size: 1.2rem;
     color: #002244;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
     margin-right: 15px;
 }
 
@@ -805,7 +981,8 @@ blockquote {
 }
 
 .arrow {
-    margin-left: auto; /* Empuja la flecha a la derecha */
+    margin-left: auto;
+    /* Empuja la flecha a la derecha */
     color: #cbd5e0;
     font-size: 0.8rem;
 }
@@ -814,7 +991,7 @@ blockquote {
 .contact-item:hover {
     transform: translateY(-2px);
     background: white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-color: #28a3c2;
 }
 
@@ -831,7 +1008,8 @@ blockquote {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #555555; /* O el color de fondo de tu app */
+    background-color: #555555;
+    /* O el color de fondo de tu app */
     padding: 20px;
 }
 
@@ -842,13 +1020,15 @@ blockquote {
     max-width: 450px;
     /* border-radius: 30px; Bordes bien redondeados */
     padding: 40px 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
 /* Corregir el color de "Home" y quitar el azul */
 .back-link {
     text-decoration: none;
-    color: #5a7d9a; /* Color azul grisáceo de la cap 11 */
+    color: #5a7d9a;
+    /* Color azul grisáceo de la cap 11 */
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -858,7 +1038,7 @@ blockquote {
 
 /* Títulos en azul marino oscuro */
 .contact-header h2 {
-    color: #002d52; 
+    color: #002d52;
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
@@ -896,7 +1076,8 @@ blockquote {
 
 .arrow {
     margin-left: auto;
-    color: #cbd5e0; /* Flecha gris clarito como en la cap 11 */
+    color: #cbd5e0;
+    /* Flecha gris clarito como en la cap 11 */
 }
 
 /* Footer centrado */
@@ -911,10 +1092,11 @@ blockquote {
 /* Reutilizamos tu estructura de tarjeta para la sección de contacto */
 .card-contact {
     background: var(--white);
-    width: 380px; /* Misma anchura que tu About */
+    width: 380px;
+    /* Misma anchura que tu About */
     min-height: 600px;
     /* border-radius: 20px; */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -939,7 +1121,9 @@ blockquote {
     gap: 5px;
 }
 
-.back-link:hover { color: var(--accent); }
+.back-link:hover {
+    color: var(--accent);
+}
 
 /* Títulos con tu estilo */
 .contact-header h2 {
@@ -976,7 +1160,7 @@ blockquote {
     transform: translateY(-3px);
     border-color: var(--accent);
     background: var(--white);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .icon-box {
@@ -989,7 +1173,7 @@ blockquote {
     align-items: center;
     font-size: 1.2rem;
     color: var(--primary);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-right: 15px;
 }
 
@@ -1044,14 +1228,16 @@ blockquote {
     align-items: flex-start;
     justify-content: center;
     gap: 8px;
-    max-width: 280px; /* Para que el texto no se extienda mucho */
+    max-width: 280px;
+    /* Para que el texto no se extienda mucho */
     margin: 0 auto;
     opacity: 0.8;
 }
 
 .security-note i {
     font-size: 0.75rem;
-    color: var(--accent); /* El azul turquesa para que sea amigable */
+    color: var(--accent);
+    /* El azul turquesa para que sea amigable */
     margin-top: 3px;
 }
 

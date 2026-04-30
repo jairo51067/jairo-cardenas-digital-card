@@ -12,17 +12,25 @@ export function renderProfile() {
 
         <section class="card-content">
             <h1>Jairo Cárdenas</h1>
-            <p class="subtitle">Full-Stack Developer & Product Manager</p>
+            <p class="subtitle">Construyo herramientas digitales que resuelven problemas reales de negocio.</p>
+
+            <!-- Párrafo de Valor Sustituto -->
+            <div class="value-proposition">
+                <p>
+                    Combinación de <strong>Product Manager</strong> y <strong>Full-Stack Dev</strong>. 
+                    No solo escribo código; diseño, construyo y llevo al mercado soluciones SaaS completas.
+                </p>
+            </div>
 
             <div class="skills-container">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">React - Vite</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">NoSQL</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Git - GitHub</span>
+                <!-- <span class="skill-tag">HTML5</span> -->
+                <!-- <span class="skill-tag">CSS3</span> -->
+                <!-- <span class="skill-tag">JavaScript</span> -->
+                <!-- <span class="skill-tag">React - Vite</span> -->
+                <!-- <span class="skill-tag">Node.js</span> -->
+                <!-- <span class="skill-tag">NoSQL</span> -->
+                <!-- <span class="skill-tag">SQL</span> -->
+                <!-- <span class="skill-tag">Git - GitHub</span> -->
 
             </div>
 
@@ -31,7 +39,8 @@ export function renderProfile() {
                     <span class="badge-new">NUEVO ABRIL 2026</span>
                     <a href="#" id="btn-projects" class="dash-btn">
                         <i class="fa-solid fa-code"></i>
-                        <span>Projects</span>
+                        <!-- <span>Projects</span> -->
+                        <span>Productos que he Creado</span>
                     </a>
                 </div>
 
