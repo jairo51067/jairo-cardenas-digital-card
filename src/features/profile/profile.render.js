@@ -1,5 +1,3 @@
-import { config } from "../../config/app.config.js";
-
 export function renderProfile() {
   const container = document.getElementById("app");
   if (!container) return;

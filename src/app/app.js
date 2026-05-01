@@ -1,4 +1,15 @@
-// src/app/app.js
+/**
+ * The `initApp` function sets up event listeners for navigation links to render different pages in a
+ * single-page application.
+ */
+
+/**
+
+* La función `initApp` configura los detectores de eventos para que los enlaces de navegación muestren diferentes páginas en una
+* aplicación de una sola página.
+
+*/
+
 import { renderProfile } from "../features/profile/profile.render.js";
 import { renderProjectsPage } from "../features/projects/projects.render.js"; 
 import { renderAboutPage } from "../features/about/about.render.js";
