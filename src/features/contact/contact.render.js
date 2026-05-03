@@ -1,69 +1,89 @@
-// src/features/contact/contact.render.js 
 export function renderContactPage() {
-    const container = document.getElementById('app');
+  const container = document.getElementById("app");
+  if (!container) return;
 
-    container.innerHTML = `
-    <div class="card-contact fade-in">
-        <nav class="nav-header">
-            <a href="#" id="btn-home-contact" class="nav-link">
-                <i class="fa-solid fa-house"></i> Home
-            </a>
+  container.innerHTML = `
+    <article class="card contact-elite fade-in">
+
+      <section class="card-content contact-view">
+
+        <!-- NAV -->
+        <nav class="contact-nav">
+          <a href="#" id="btn-home" class="nav-link">← Home</a>
         </nav>
 
+        <!-- HEADER -->
         <header class="contact-header">
-            <h2>Let's Talk</h2>
-            <p>¿Tienes un proyecto en mente o una consulta técnica? Estoy a un clic de distancia.</p>
+          <h2>Let’s build something great</h2>
+          <p>Disponible para SaaS, automatización y desarrollo de productos digitales.</p>
         </header>
 
-        <div class="contact-methods">
-            <a href="https://wa.me/584127055024" class="contact-item" target="_blank">
-                <div class="icon-box whatsapp-bg"><i class="fa-brands fa-whatsapp"></i></div>
-                <div class="details">
-                    <span>WhatsApp</span>
-                    <small>Respuesta inmediata</small>
-                </div>
-                <i class="fa-solid fa-chevron-right arrow"></i>
-            </a>
+        <!-- CONTACT GRID -->
+        <div class="contact-grid">
 
-            <a href="mailto:jairo.cardenas.dev@gmail.com" class="contact-item">
-                <div class="icon-box email-bg"><i class="fa-solid fa-envelope"></i></div>
-                <div class="details">
-                    <span>Email</span>
-                    <small>jairo.cardenas.dev@gmail.com</small>
-                </div>
-                <i class="fa-solid fa-chevron-right arrow"></i>
-            </a>
+          <!-- WHATSAPP -->
+          <a href="https://wa.me/5804127055024" target="_blank" class="contact-card whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <span>WhatsApp</span>
+              <p>Respuesta inmediata</p>
+            </div>
+          </a>
 
-            <a href="https://www.linkedin.com/in/jairo-a-cárdenas-m-49b94b25" class="contact-item" target="_blank">
-                <div class="icon-box linkedin-bg"><i class="fa-brands fa-linkedin-in"></i></div>
-                <div class="details">
-                    <span>LinkedIn</span>
-                    <small>Perfil profesional</small>
-                </div>
-                <i class="fa-solid fa-chevron-right arrow"></i>
-            </a>
+          <!-- EMAIL -->
+          <a href="mailto:jairo.cardenas.dev@gmail.com" class="contact-card email">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>Respuesta formal</p>
+            </div>
+          </a>
 
-            <!-- Nuevo apartado para Instagram -->
-            <a href="https://www.instagram.com/jairocardenas.dev?igsh=ZG41a2o1czY1d3Ru" class="contact-item" target="_blank">
-                <div class="icon-box instagram-bg"><i class="fa-brands fa-instagram"></i></div>
-                <div class="details">
-                    <span>Instagram</span>
-                    <small>Contenido digital y diseño</small>
-                </div>
-                <i class="fa-solid fa-chevron-right arrow"></i>
-            </a>
+          <!-- GITHUB -->
+          <a href="https://github.com/jairo51067" target="_blank" class="contact-card github">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <span>GitHub</span>
+              <p>Proyectos reales</p>
+            </div>
+          </a>
+
+          <!-- LINKEDIN -->
+          <a href="https://www.linkedin.com/in/jairo-a-c%C3%A1rdenas-m-49b94b25?original_referer=https%3A%2F%2Fjairo51067.github.io%2F" target="_blank" class="contact-card linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <span>LinkedIn</span>
+              <p>Perfil profesional</p>
+            </div>
+          </a>
+
         </div>
 
-        <footer class="contact-footer">
-            <p>San Cristóbal, Venezuela 🇻🇪</p>
-            <small>Disponibilidad para proyectos remotos</small>
-        </footer>
-    </div>
-    `;
+        <!-- CTA -->
+        <div class="contact-cta">
+          <h3>¿Tienes una idea en mente?</h3>
+          <p>Conversemos y la llevamos a producto real.</p>
 
-    // Lógica para volver al inicio
-    document.getElementById('btn-home-contact').onclick = (e) => {
-        e.preventDefault();
-        location.reload(); 
-    };
+          <a href="mailto:jairo.cardenas.dev@gmail.com" class="btn-primary-contact">
+            Iniciar conversación
+            <i class="fa-solid fa-paper-plane"></i>
+          </a>
+        </div>
+
+        <!-- NOTE -->
+        <div class="contact-note">
+          <i class="fa-solid fa-clock"></i>
+          <p>Tiempo de respuesta promedio: <strong>menos de 24h</strong></p>
+        </div>
+
+      </section>
+
+      <!-- FOOTER RESTAURADO -->
+      <footer class="contact-footer">
+        <span>San Cristóbal, Venezuela</span>
+        <img src="public/images/bandera_venezuela_icon.webp" class="flag" alt="Venezuela">
+      </footer>
+
+    </article>
+  `;
 }

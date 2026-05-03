@@ -6,7 +6,7 @@
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 12px; 
     margin-bottom: 15px;
     padding-top: 12px;
 }
@@ -189,4 +189,97 @@
 .security-note:hover {
     opacity: 1;
     transition: 0.3s;
+}
+
+/* =========================
+   PROFILE ELITE UI
+========================= */
+
+.profile-elite .hero-title {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+/* VALUE */
+.value-proposition {
+    background: linear-gradient(135deg, #f8fbff, #eef6ff);
+    border: 1px solid #dbeafe;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* QUICK STATS */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.stat {
+    background: white;
+    border: 1px solid #eef2f7;
+    border-radius: 14px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.stat .num {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.stat .label {
+    font-size: 0.65rem;
+    color: var(--text-light);
+}
+
+/* DASH BUTTON IMPROVEMENT */
+.dash-btn {
+    transition: all 0.25s ease;
+}
+
+.dash-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* PRIMARY CTA MÁS FUERTE */
+.primary-dash {
+    background: linear-gradient(135deg, #0047AB, #002244);
+}
+
+.primary-dash:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 71, 171, 0.25);
+}
+
+/* CV mejora */
+.cv-module {
+    margin-top: 20px;
+    background: #f8fafc;
+}
+
+.security-note {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.security-note:hover {
+    opacity: 1;
 }

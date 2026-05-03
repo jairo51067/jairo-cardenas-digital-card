@@ -1,173 +1,199 @@
-/* ==========================================================================
-   ESTILOS VISTA CONTACTO
-   ========================================================================== */ 
+/* =========================
+   CONTACT ELITE UI
+========================= */
 
-/* Contenedor principal */ 
-.card-contact {
-    background: var(--white);
-    width: 100%;
-    max-width: 400px;
-    min-height: 100vh;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+.contact-view {
+    padding: 25px 18px;
+    text-align: left;
 }
 
-/* Navegación */
-.nav-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-.nav-link {
-    color: #888;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: 0.3s;
-}
-
-.nav-link:hover {
-    color: var(--accent);
-}
-
-/* Header */
+/* HEADER */
 .contact-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 900;
     color: var(--primary);
-    margin-bottom: 8px;
 }
 
 .contact-header p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-light);
-    margin-bottom: 30px;
+    margin-top: 8px;
     line-height: 1.5;
 }
 
-/* Métodos de contacto */
-.contact-methods {
+/* GRID CONTACT */
+.contact-grid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    flex-grow: 1;
+    gap: 12px;
+    margin: 20px 0;
 }
 
-.contact-item {
-    text-decoration: none !important;
+/* CARD CONTACT */
+.contact-card {
     display: flex;
     align-items: center;
-    background: #f8fafb;
-    border: 1px solid #edf2f7;
-    border-radius: 15px;
-    padding: 15px;
-    transition: all 0.3s ease;
-    color: inherit;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 14px;
+    text-decoration: none;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: 0.25s ease;
 }
 
-.contact-item:hover {
+/* ICONOS */
+.contact-card i {
+    font-size: 1.3rem;
+}
+
+.contact-card span {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.85rem;
+}
+
+.contact-card p {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+/* HOVER */
+.contact-card:hover {
     transform: translateY(-3px);
     border-color: var(--accent);
-    background: var(--white);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* Iconos con colores de marca */
-.icon-box {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-right: 15px;
-    flex-shrink: 0;
-}
+/* CTA PRINCIPAL */
+.contact-cta {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 16px;
 
-.whatsapp-bg { 
-    background: #25D366; 
-    color: white; 
-}
+    background: linear-gradient(135deg, #eef6ff, #f8fbff);
+    border: 1px solid #dbeafe;
 
-.email-bg { 
-    background: var(--primary-blue); 
-    color: white; 
-}
-
-.linkedin-bg { 
-    background: #0077b5; 
-    color: white; 
-}
-
-.instagram-bg {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: white;
-}
-
-/* Detalles del contacto */
-.details span {
-    display: block;
-    font-weight: 700;
-    color: var(--text-main);
-    font-size: 0.9rem;
-}
-
-.details small {
-    color: var(--text-light);
-    font-size: 0.75rem;
-}
-
-/* Flecha */
-.arrow {
-    margin-left: auto;
-    color: #ddd;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.contact-item:hover .arrow {
-    color: var(--accent);
-    transform: translateX(3px);
-}
-
-/* Footer */
-.contact-footer {
-    margin-top: auto;
-    padding-top: 20px;
     text-align: center;
-    border-top: 1px solid #f0f0f0;
 }
 
-.contact-footer p {
+.contact-cta h3 {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.contact-cta p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: 10px 0 15px;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, #0047AB, #002244);
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.btn-primary-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 71, 171, 0.25);
+}
+
+/* NOTE */
+.contact-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 15px;
+    font-size: 0.7rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+/* NAV CONTACTO */
+.contact-nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-nav .nav-link {
+    color: var(--primary);
+    text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-main);
-    margin-bottom: 5px;
+    transition: 0.2s;
 }
 
-.contact-footer small {
-    color: var(--text-light);
+.contact-nav .nav-link:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+.contact-card.whatsapp i {
+    color: #25D366;
+}
+
+.contact-card.whatsapp:hover {
+    border-color: #25D366;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+}
+
+/* =========================
+   EMAIL
+========================= */
+.contact-card.email i {
+    color: #EA4335;
+}
+
+.contact-card.email:hover {
+    border-color: #EA4335;
+    box-shadow: 0 8px 20px rgba(234, 67, 53, 0.2);
+}
+
+/* =========================
+   GITHUB
+========================= */
+.contact-card.github i {
+    color: #24292e;
+}
+
+.contact-card.github:hover {
+    border-color: #24292e;
+    box-shadow: 0 8px 20px rgba(36, 41, 46, 0.15);
+}
+
+/* =========================
+   LINKEDIN
+========================= */
+.contact-card.linkedin i {
+    color: #0077B5;
+}
+
+.contact-card.linkedin:hover {
+    border-color: #0077B5;
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.2);
+}
+
+.contact-footer {
+    margin-top: 25px;
     font-size: 0.75rem;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-    .card-contact {
-        margin: 10px;
-        padding: 20px;
-        min-height: 100vh;
-    }
-    
-    .contact-item {
-        padding: 12px;
-    }
+    color: var(--text-light);
+    text-align: center;
 }
