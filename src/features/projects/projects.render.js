@@ -20,7 +20,7 @@ export function renderProjectsPage() {
       category: "app",
       isNew: false,
     },
-  ];  
+  ];
 
   const renderProjects = (filter = "all") => {
     const filtered =
@@ -109,9 +109,11 @@ export function renderProjectsPage() {
             </section>
 
             <footer class="projects-footer">
-                <span>Explore my code on GitHub</span>
-                <a href="https://github.com/jairo51067" target="_blank">
+              <span>Built as real-world SaaS prototypes</span>
+
+                <a href="#" class="github-link">
                     <i class="fa-brands fa-github"></i>
+                    <span>View source</span>
                 </a>
             </footer>
 
