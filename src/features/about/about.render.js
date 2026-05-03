@@ -3,7 +3,7 @@
 import { renderContactPage } from '../contact/contact.render.js'; 
 
 
-const content = {
+const content = { 
   es: {
     title: "Sobre Mí",
     highlight: "Desarrollador Web Full-Stack & Product Manager",
@@ -34,68 +34,164 @@ export function renderAboutPage(lang = "es") {
 
   container.innerHTML = `
     <article class="card fade-in">
-        <section class="card-content about-view">
-            <nav class="about-nav">
-                <a href="#" id="btn-home" class="nav-link">${data.btnBack}</a>
-                <div class="lang-selector">
-                    <button type="button" id="toggle-en" class="lang-btn ${lang === "en" ? "active" : ""}" data-lang="en">EN</button>
-                    <span class="sep">|</span>
-                    <button type="button" id="toggle-es" class="lang-btn ${lang === "es" ? "active" : ""}" data-lang="es">ES</button>
-                </div>
-            </nav>
 
-            <header class="about-header">
-                <h2>${data.title}</h2>
-                <div class="underline"></div>
-            </header>
+      <section class="card-content about-view">
 
-            <div class="about-body">
-                <p class="highlight">${data.highlight}</p>
-                <p class="main-text">${data.text1}</p>
-                <p class="main-text">${data.text2}</p>
+        <!-- NAV -->
+        <nav class="about-nav">
+          <a href="#" id="btn-home" class="nav-link">${data.btnBack}</a>
 
-                <!-- Visualización de Tecnologías Agrupadas -->
-                <div class="tech-stack-grid about-tech">
-                    <div class="tech-group">
-                        <p class="group-label">${data.techLabels[0]}</p>
-                        <div class="group-icons">
-                            <i class="fa-brands fa-react" title="React"></i>
-                            <i class="fa-solid fa-bolt" title="Vite"></i>
-                        </div>
-                    </div>
-                    <div class="tech-group">
-                        <p class="group-label">${data.techLabels[1]}</p>
-                        <div class="group-icons">
-                            <i class="fa-brands fa-node-js" title="Node.js"></i>
-                        </div>
-                    </div>
-                    <div class="tech-group">
-                        <p class="group-label">${data.techLabels[2]}</p>
-                        <div class="group-icons">
-                            <i class="fa-solid fa-database" title="SQL & NoSQL"></i>
-                        </div>
-                    </div>
-                    <div class="tech-group">
-                        <p class="group-label">${data.techLabels[3]}</p>
-                        <div class="group-icons">
-                            <i class="fa-brands fa-github" title="Git & GitHub"></i>
-                        </div>
-                    </div>
-                </div>
+          <div class="lang-selector">
+            <button id="toggle-en" class="lang-btn ${lang === "en" ? "active" : ""}">EN</button>
+            <span class="sep">|</span>
+            <button id="toggle-es" class="lang-btn ${lang === "es" ? "active" : ""}">ES</button>
+          </div>
+        </nav>
 
-                <blockquote>"${data.quote}"</blockquote>
+        <!-- HEADER -->
+        <header class="about-header">
+          <h2>${data.title}</h2>
+          <div class="underline"></div>
+        </header>
+
+        <div class="about-body">
+
+          <p class="highlight">${data.highlight}</p>
+
+          <!-- INTRO -->
+          <div class="about-card">
+            <p class="main-text">${data.text1}</p>
+            <p class="main-text">${data.text2}</p>
+          </div>
+
+          <!-- METRICS -->
+          <div class="metrics-grid">
+
+            <div class="metric-card">
+              <span class="metric-number">20+</span>
+              <span class="metric-label">Años de experiencia</span>
             </div>
 
-            <footer class="about-footer">
-                <a href="#" id="btn-talk" class="btn-primary-about">${data.btnContact}</a>
-            </footer>
-        </section>
-    </article>
-    `;
+            <div class="metric-card">
+              <span class="metric-number">10+</span>
+              <span class="metric-label">Proyectos digitales</span>
+            </div>
 
-  // --- LÓGICA DE EVENTOS ---
-  document.getElementById("toggle-en").onclick = (e) => { e.preventDefault(); renderAboutPage("en"); };
-  document.getElementById("toggle-es").onclick = (e) => { e.preventDefault(); renderAboutPage("es"); };
-  document.getElementById("btn-home").onclick = (e) => { e.preventDefault(); location.reload(); };
-  document.getElementById("btn-talk").onclick = (e) => { e.preventDefault(); renderContactPage(); };
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Enfoque en soluciones</span>
+            </div>
+
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div>
+                <h4>Industria & Procesos</h4>
+                <p>+20 años liderando operaciones y optimización industrial.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div>
+                <h4>Transición Digital</h4>
+                <p>Especialización en desarrollo web y automatización.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div>
+                <h4>Actualidad</h4>
+                <p>Desarrollo de soluciones SaaS, apps y sistemas escalables.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- STACK -->
+          <div class="tech-stack-grid about-tech">
+
+            <div class="tech-group">
+              <p class="group-label">${data.techLabels[0]}</p>
+              <div class="group-icons">
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+            </div>
+
+            <div class="tech-group">
+              <p class="group-label">${data.techLabels[1]}</p>
+              <div class="group-icons">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+            </div>
+
+            <div class="tech-group">
+              <p class="group-label">${data.techLabels[2]}</p>
+              <div class="group-icons">
+                <i class="fa-solid fa-database"></i>
+              </div>
+            </div>
+
+            <div class="tech-group">
+              <p class="group-label">${data.techLabels[3]}</p>
+              <div class="group-icons">
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- VALUE STATEMENT -->
+          <div class="value-box">
+            <h3>Why me?</h3>
+            <p>
+              Combino experiencia en procesos industriales + desarrollo digital moderno, 
+              lo que me permite entender tanto el problema como la solución de negocio.
+            </p>
+          </div>
+
+          <!-- QUOTE -->
+          <blockquote class="about-quote">
+            "${data.quote}"
+          </blockquote>
+
+        </div>
+
+        <!-- CTA -->
+        <footer class="about-footer">
+          <a href="#" id="btn-talk" class="btn-primary-about">
+            ${data.btnContact}
+          </a>
+        </footer>
+
+      </section>
+    </article>
+  `;
+
+  // EVENTS
+  document.getElementById("toggle-en").onclick = (e) => {
+    e.preventDefault();
+    renderAboutPage("en");
+  };
+
+  document.getElementById("toggle-es").onclick = (e) => {
+    e.preventDefault();
+    renderAboutPage("es");
+  };
+
+  document.getElementById("btn-home").onclick = (e) => {
+    e.preventDefault();
+    location.reload();
+  };
+
+  document.getElementById("btn-talk").onclick = (e) => {
+    e.preventDefault();
+    renderContactPage();
+  };
 }
