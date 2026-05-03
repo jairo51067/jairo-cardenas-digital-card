@@ -33,7 +33,7 @@ export function renderAboutPage(lang = "es") {
   const data = content[lang];
 
   container.innerHTML = `
-    <article class="card fade-in">
+    <article class="card fade-in about-elite">
 
       <section class="card-content about-view">
 
@@ -48,133 +48,125 @@ export function renderAboutPage(lang = "es") {
           </div>
         </nav>
 
-        <!-- HEADER -->
-        <header class="about-header">
-          <h2>${data.title}</h2>
+        <!-- HERO ABOUT -->
+        <header class="about-hero">
+
+          <h2 class="reveal">${data.title}</h2>
+
+          <p class="highlight reveal">
+            ${data.highlight}
+          </p>
+
           <div class="underline"></div>
+
         </header>
 
-        <div class="about-body">
+        <!-- STORY BLOCK -->
+        <div class="story-block">
 
-          <p class="highlight">${data.highlight}</p>
-
-          <!-- INTRO -->
-          <div class="about-card">
-            <p class="main-text">${data.text1}</p>
-            <p class="main-text">${data.text2}</p>
+          <div class="story-item reveal">
+            <span class="story-tag">Inicio</span>
+            <p>${data.text1}</p>
           </div>
 
-          <!-- METRICS -->
-          <div class="metrics-grid">
-
-            <div class="metric-card">
-              <span class="metric-number">20+</span>
-              <span class="metric-label">Años de experiencia</span>
-            </div>
-
-            <div class="metric-card">
-              <span class="metric-number">10+</span>
-              <span class="metric-label">Proyectos digitales</span>
-            </div>
-
-            <div class="metric-card">
-              <span class="metric-number">100%</span>
-              <span class="metric-label">Enfoque en soluciones</span>
-            </div>
-
+          <div class="story-item reveal">
+            <span class="story-tag">Evolución</span>
+            <p>${data.text2}</p>
           </div>
 
-          <!-- TIMELINE -->
-          <div class="timeline">
-
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div>
-                <h4>Industria & Procesos</h4>
-                <p>+20 años liderando operaciones y optimización industrial.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div>
-                <h4>Transición Digital</h4>
-                <p>Especialización en desarrollo web y automatización.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div>
-                <h4>Actualidad</h4>
-                <p>Desarrollo de soluciones SaaS, apps y sistemas escalables.</p>
-              </div>
-            </div>
-
+          <div class="story-item reveal">
+            <span class="story-tag">Enfoque actual</span>
+            <p>Construcción de sistemas digitales escalables, SaaS y automatización de procesos.</p>
           </div>
-
-          <!-- STACK -->
-          <div class="tech-stack-grid about-tech">
-
-            <div class="tech-group">
-              <p class="group-label">${data.techLabels[0]}</p>
-              <div class="group-icons">
-                <i class="fa-brands fa-react"></i>
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-            </div>
-
-            <div class="tech-group">
-              <p class="group-label">${data.techLabels[1]}</p>
-              <div class="group-icons">
-                <i class="fa-brands fa-node-js"></i>
-              </div>
-            </div>
-
-            <div class="tech-group">
-              <p class="group-label">${data.techLabels[2]}</p>
-              <div class="group-icons">
-                <i class="fa-solid fa-database"></i>
-              </div>
-            </div>
-
-            <div class="tech-group">
-              <p class="group-label">${data.techLabels[3]}</p>
-              <div class="group-icons">
-                <i class="fa-brands fa-github"></i>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- VALUE STATEMENT -->
-          <div class="value-box">
-            <h3>Why me?</h3>
-            <p>
-              Combino experiencia en procesos industriales + desarrollo digital moderno, 
-              lo que me permite entender tanto el problema como la solución de negocio.
-            </p>
-          </div>
-
-          <!-- QUOTE -->
-          <blockquote class="about-quote">
-            "${data.quote}"
-          </blockquote>
 
         </div>
 
+        <!-- METRICS (CON ANIMACIÓN) -->
+        <div class="metrics-grid elite">
+
+          <div class="metric-card">
+            <span class="metric-number counter" data-target="20">0</span>
+            <span class="metric-label">Años experiencia</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-number counter" data-target="10">0</span>
+            <span class="metric-label">Proyectos activos</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-number counter" data-target="100">0</span>
+            <span class="metric-label">% enfoque solución</span>
+          </div>
+
+        </div>
+
+        <!-- STACK -->
+        <div class="tech-stack-grid about-tech reveal">
+
+          <div class="tech-group">
+            <p class="group-label">${data.techLabels[0]}</p>
+            <div class="group-icons">
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <p class="group-label">${data.techLabels[1]}</p>
+            <div class="group-icons">
+              <i class="fa-brands fa-node-js"></i>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <p class="group-label">${data.techLabels[2]}</p>
+            <div class="group-icons">
+              <i class="fa-solid fa-database"></i>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <p class="group-label">${data.techLabels[3]}</p>
+            <div class="group-icons">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VALUE PROPOSITION -->
+        <div class="value-elite reveal">
+
+          <h3>¿Por qué trabajar conmigo?</h3>
+
+          <p>
+            Combino <strong>experiencia industrial real</strong> + 
+            <strong>desarrollo de software moderno</strong>, lo que me permite entender 
+            el problema desde el negocio y construir la solución desde la tecnología.
+          </p>
+
+        </div>
+
+        <!-- QUOTE -->
+        <blockquote class="about-quote reveal">
+          "${data.quote}"
+        </blockquote>
+
         <!-- CTA -->
-        <footer class="about-footer">
+        <footer class="about-footer reveal">
+
           <a href="#" id="btn-talk" class="btn-primary-about">
             ${data.btnContact}
           </a>
+
         </footer>
 
       </section>
     </article>
   `;
 
-  // EVENTS
+  // NAV
   document.getElementById("toggle-en").onclick = (e) => {
     e.preventDefault();
     renderAboutPage("en");
@@ -194,4 +186,44 @@ export function renderAboutPage(lang = "es") {
     e.preventDefault();
     renderContactPage();
   };
+
+  // 🔥 ANIMACIONES
+  initAboutEliteAnimations();
+}
+
+function initAboutEliteAnimations() {
+
+  // COUNTERS
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    const update = () => {
+      const target = +counter.getAttribute("data-target");
+      const current = +counter.innerText;
+
+      const increment = target / 40;
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(update, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  });
+
+  // SCROLL REVEAL SIMPLE
+  const elements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
 }

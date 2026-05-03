@@ -251,3 +251,107 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   ELITE ABOUT EXPERIENCE
+========================= */
+
+.about-hero {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-hero h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.underline {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin-top: 8px;
+    border-radius: 3px;
+}
+
+/* STORY */
+.story-block {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.story-item {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.story-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+/* METRICS ELITE */
+.metrics-grid.elite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.metric-number {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.metric-label {
+    font-size: 0.65rem;
+    color: var(--text-light);
+}
+
+/* VALUE */
+.value-elite {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #eef6ff, #f8fbff);
+    border: 1px solid #dbeafe;
+}
+
+.value-elite h3 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.value-elite p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
