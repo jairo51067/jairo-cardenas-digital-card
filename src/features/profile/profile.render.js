@@ -1,5 +1,7 @@
+
+
 export function renderProfile() {
-  const container = document.getElementById("app");
+  const container = document.getElementById("app"); 
   if (!container) return;
 
   container.innerHTML = `

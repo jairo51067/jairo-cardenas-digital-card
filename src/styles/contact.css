@@ -1,0 +1,173 @@
+/* ==========================================================================
+   ESTILOS VISTA CONTACTO
+   ========================================================================== */ 
+
+/* Contenedor principal */ 
+.card-contact {
+    background: var(--white);
+    width: 100%;
+    max-width: 400px;
+    min-height: 100vh;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Navegación */
+.nav-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.nav-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+/* Header */
+.contact-header h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.contact-header p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Métodos de contacto */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.contact-item {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    background: #f8fafb;
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    color: inherit;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Iconos con colores de marca */
+.icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.whatsapp-bg { 
+    background: #25D366; 
+    color: white; 
+}
+
+.email-bg { 
+    background: var(--primary-blue); 
+    color: white; 
+}
+
+.linkedin-bg { 
+    background: #0077b5; 
+    color: white; 
+}
+
+.instagram-bg {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+/* Detalles del contacto */
+.details span {
+    display: block;
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.details small {
+    color: var(--text-light);
+    font-size: 0.75rem;
+}
+
+/* Flecha */
+.arrow {
+    margin-left: auto;
+    color: #ddd;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.contact-item:hover .arrow {
+    color: var(--accent);
+    transform: translateX(3px);
+}
+
+/* Footer */
+.contact-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.contact-footer p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.contact-footer small {
+    color: var(--text-light);
+    font-size: 0.75rem;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .card-contact {
+        margin: 10px;
+        padding: 20px;
+        min-height: 100vh;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+}

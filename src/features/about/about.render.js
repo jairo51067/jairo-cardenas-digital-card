@@ -1,5 +1,7 @@
+
 // src/features/about/about.render.js
-import { renderContactPage } from '../contact/contact.render.js';
+import { renderContactPage } from '../contact/contact.render.js'; 
+
 
 const content = {
   es: {

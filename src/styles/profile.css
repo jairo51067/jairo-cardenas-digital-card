@@ -1,0 +1,192 @@
+/* ==========================================================================
+   DASHBOARD Y PROFILE (HOME PRINCIPAL)
+   ========================================================================== */
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-top: 12px;
+}
+
+.dash-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: var(--white);
+    border: 1px solid #a3a3a3cc;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--primary-blue);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    min-height: 90px;
+    justify-content: center;
+}
+
+.dash-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2980b9;
+    transition: transform 0.3s ease;
+}
+
+.dash-btn em { 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dash-btn span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dash-btn:hover {
+    border: 1px solid var(--accent);
+    transform: translateY(-2px);
+}
+
+.dash-btn:hover i {
+    transform: scale(1.15);
+}
+
+/* Botón principal Let's Talk */
+.primary-dash {
+    grid-column: span 2;
+    background: var(--primary-blue);
+    color: white;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    height: 50px;
+    min-height: auto;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 34, 68, 0.15);
+    margin-top: 10px;
+}
+
+.primary-dash i {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.primary-dash span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.primary-dash:hover {
+    background: var(--deep-black);
+    border-color: var(--electric-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 34, 68, 0.25);
+}
+
+/* Badge NUEVO (para dashboard) */
+.badge-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.badge-wrapper .dash-btn {
+    height: 100%;
+    width: 100%;
+}
+
+.badge-new {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background: linear-gradient(45deg, #e52d27, #b31217);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(240, 17, 17, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Módulo CV */
+.cv-module {
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px 15px 10px;
+    background: var(--bg-light);
+    border-radius: 15px;
+    border: 1px solid #edf2f7;
+}
+
+.section-title {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cv-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.cv-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.85rem;
+    transition: 0.2s;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.cv-link:hover {
+    background: var(--white);
+    color: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.security-note {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    max-width: 280px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.security-note i {
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-top: 3px;
+}
+
+.security-note p {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    line-height: 1.3;
+    text-align: left;
+}
+
+.security-note:hover {
+    opacity: 1;
+    transition: 0.3s;
+}

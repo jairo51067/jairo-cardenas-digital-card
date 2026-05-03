@@ -1,5 +1,4 @@
-// src/features/contact/contact.render.js
-
+// src/features/contact/contact.render.js 
 export function renderContactPage() {
     const container = document.getElementById('app');
 

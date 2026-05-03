@@ -1,0 +1,405 @@
+/* ==========================================================================
+   ESTILOS VISTA DE PROYECTOS DETALLADA
+   ========================================================================== */ 
+/* Mejora interacción táctil */
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Evita zoom raro en inputs */
+html {
+    touch-action: manipulation;
+}   
+
+/* Botón Volver */
+.volver-btn,
+.nav-link,
+#btn-home {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+#btn-home:hover {
+    opacity: 0.8;
+}
+
+/* Nav superior */
+.nav-header {
+    margin-bottom: 25px;
+}
+
+/* TITULOS */
+.projects-main-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.projects-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+/* LISTA */
+.projects-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Contenedor de proyectos */
+.projects-list-container {
+    margin-bottom: 20px;
+}
+
+/* TARJETAS DE PROYECTO *//* CARD */
+.project-card {
+    background: white;
+    border: 1px solid #eef2f7;
+    padding: 18px;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* HOVER PRO */
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-color: #dbeafe;
+}
+
+/* HEADER */
+.project-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* ICONO */
+.project-icon-box {
+    background: linear-gradient(135deg, #eef6ff, #f8fbff);
+    border-radius: 14px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.project-main-icon {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+}
+
+/* INFO */
+.project-info {
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.project-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+
+/* Flecha de enlace */
+/* LINK */
+.project-link-arrow {
+    color: var(--accent);
+    font-size: 1.3rem;
+    transition: transform 0.2s ease;
+}
+
+.project-link-arrow:hover {
+    transform: scale(1.15);
+}
+
+
+/* Badge NUEVO */
+.badge-new {
+    position: absolute;
+    top: -8px;
+    right: -6px;
+    background: linear-gradient(45deg, #ff3b3b, #ff0000);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* BUILDING */
+.building-notice {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fff9db, #fff3bf);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.building-icon {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    color: #f59f00;
+}
+
+
+.building-text strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.building-text p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Sección Explora Más *//* CTA */
+.explore-more-section {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.explore-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.btn-portfolio-full {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #0047AB, #002244);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-portfolio-full:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,71,171,0.3);
+}
+
+/* Footer Proyectos */
+.projects-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    color: #888;
+    font-size: 0.8rem;
+    background: #fafafa;
+    border-top: 1px solid #edf2f7;
+}
+
+.projects-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.projects-footer a:hover {
+    color: var(--accent);
+}
+
+/* Asegura que projects-view use el padding correcto */
+.projects-view {
+    padding: 30px 20px;
+    text-align: left;
+}
+
+/* FILTROS */
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background: #eef2f7;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* BOTON PREVIEW */
+.project-preview-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+/* MODAL */
+.project-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.75);
+
+    backdrop-filter: blur(6px);
+
+    justify-content: center;
+    align-items: flex-end; /* 🔥 estilo mobile bottom sheet */
+
+    z-index: 999;
+}
+
+/* CONTENIDO */
+.modal-content {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+    border-radius: 20px 20px 0 0;
+
+    padding: 28px 22px 30px;
+    animation: slideUp 0.35s ease;
+
+    /* 🔥 espacio interno real */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* HEADER */
+.modal-content h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.modal-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* BOTÓN */
+.modal-content .btn-portfolio-full {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 0.9rem;
+}
+
+/* CERRAR */
+.close-modal {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ANIMACIÓN */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.building-notice {
+    margin-top: 10px;
+    padding: 18px;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #f8fafc, #eef5ff);
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* HEADER */
+.building-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
+/* TEXTO */
+.building-text {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* TAGS */
+.building-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.building-tags span {
+    background: white;
+    border: 1px solid #dbeafe;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
