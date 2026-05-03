@@ -51,7 +51,7 @@ export function renderContactPage() {
           </a>
 
           <!-- LINKEDIN -->
-          <a href="https://www.linkedin.com/in/jairo-a-c%C3%A1rdenas-m-49b94b25?original_referer=https%3A%2F%2Fjairo51067.github.io%2F" target="_blank" class="contact-card linkedin">
+          <a href="https://www.linkedin.com/in/jairocardenas-dev-49b94b25" target="_blank" class="contact-card linkedin">
             <i class="fa-brands fa-linkedin"></i>
             <div>
               <span>LinkedIn</span>
