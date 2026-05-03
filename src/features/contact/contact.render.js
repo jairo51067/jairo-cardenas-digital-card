@@ -1,3 +1,5 @@
+import { navigate } from "../../router/app.router.js";
+
 export function renderContactPage() {
   const container = document.getElementById("app");
   if (!container) return;

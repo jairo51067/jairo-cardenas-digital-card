@@ -20,7 +20,7 @@ export function renderProjectsPage() {
       category: "app",
       isNew: false,
     },
-  ];
+  ];  
 
   const renderProjects = (filter = "all") => {
     const filtered =

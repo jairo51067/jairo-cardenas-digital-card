@@ -1,3 +1,5 @@
+import { navigate } from "../../router/app.router.js";
+
 export function renderProfile() {
   const container = document.getElementById("app");
   if (!container) return;
@@ -100,4 +102,19 @@ export function renderProfile() {
 
     </article>
   `;
+
+  document.getElementById("btn-projects").onclick = (e) => {
+  e.preventDefault();
+  navigate("projects");
+};
+
+document.getElementById("btn-about").onclick = (e) => {
+  e.preventDefault();
+  navigate("about");
+};
+
+document.getElementById("btn-talk").onclick = (e) => {
+  e.preventDefault();
+  navigate("contact");
+};
 }

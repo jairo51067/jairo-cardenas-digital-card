@@ -1,5 +1,6 @@
 
-// src/features/about/about.render.js
+import { navigate } from "../../router/app.router.js";
+
 import { renderContactPage } from '../contact/contact.render.js'; 
 
 
@@ -179,13 +180,13 @@ export function renderAboutPage(lang = "es") {
 
   document.getElementById("btn-home").onclick = (e) => {
     e.preventDefault();
-    location.reload();
+     navigate("home");
   };
 
   document.getElementById("btn-talk").onclick = (e) => {
     e.preventDefault();
-    renderContactPage();
-  };
+    navigate("contact");
+  }; 
 
   // 🔥 ANIMACIONES
   initAboutEliteAnimations();
