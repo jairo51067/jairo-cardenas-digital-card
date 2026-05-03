@@ -12,28 +12,55 @@ const routes = {
   contact: renderContactPage,
 };
 
-export function navigate(route, push = true) {
+let currentRoute = "home";
+
+function setActiveRoute(route) {
+  document.querySelectorAll("[data-route]").forEach(el => {
+    el.classList.remove("active-route");
+  });
+
+  const activeBtn = document.querySelector(`[data-route="${route}"]`);
+  if (activeBtn) activeBtn.classList.add("active-route");
+}
+
+function transitionRender(callback) {
   const container = document.getElementById("app");
 
   if (!container) return;
 
-  // render
-  switch (route) {
-    case "about":
-      renderAboutPage("es");
-      break;
-    case "projects":
-      renderProjectsPage();
-      break;
-    case "contact":
-      renderContactPage();
-      break;
-    default:
-      renderProfile();
-  }
+  container.classList.add("app-fade-out");
 
-  // history API
+  setTimeout(() => {
+    container.classList.remove("app-fade-out");
+    container.classList.add("app-fade-in");
+
+    callback();
+
+    setTimeout(() => {
+      container.classList.remove("app-fade-in");
+    }, 250);
+  }, 150);
+}
+
+export function navigate(route, push = true) {
+  const view = routes[route];
+
+  if (!view) return;
+
+  currentRoute = route;
+
+  transitionRender(() => {
+    if (route === "about") view("es");
+    else view();
+  });
+
+  setActiveRoute(route);
+
   if (push) {
     history.pushState({ route }, "", `#${route}`);
   }
-}  
+}
+
+export function getCurrentRoute() {
+  return currentRoute;
+}

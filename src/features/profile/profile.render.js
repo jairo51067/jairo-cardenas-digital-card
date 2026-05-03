@@ -54,18 +54,18 @@ export function renderProfile() {
           <div class="badge-wrapper">
             <span class="badge-new">ACTIVO 2026</span>
 
-            <a href="#" id="btn-projects" class="dash-btn">
+            <a href="#" id="btn-projects" data-route="projects" class="dash-btn">
               <i class="fa-solid fa-code"></i>
               <span>Ver productos</span>
             </a>
           </div>
 
-          <a href="#" id="btn-about" class="dash-btn">
+         <a href="#" id="btn-about" data-route="about" class="dash-btn">
             <i class="fa-solid fa-user-tie"></i>
             <span>Sobre mí</span>
           </a>
 
-          <a href="#" id="btn-talk" class="dash-btn primary-dash">
+         <a href="#" id="btn-talk" data-route="contact" class="dash-btn primary-dash">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Hablemos de tu proyecto</span>
           </a>
@@ -103,18 +103,10 @@ export function renderProfile() {
     </article>
   `;
 
-  document.getElementById("btn-projects").onclick = (e) => {
-  e.preventDefault();
-  navigate("projects");
-};
-
-document.getElementById("btn-about").onclick = (e) => {
-  e.preventDefault();
-  navigate("about");
-};
-
-document.getElementById("btn-talk").onclick = (e) => {
-  e.preventDefault();
-  navigate("contact");
-};
+ document.querySelectorAll("[data-route]").forEach(btn => {
+    btn.onclick = (e) => {
+      e.preventDefault();
+      navigate(btn.dataset.route);
+    };
+  });
 }

@@ -171,3 +171,26 @@ h1 {
     width: 20px;
     height: auto;
 }
+
+/* =========================
+   ROUTER UX TRANSITIONS
+========================= */
+
+.app-fade-out {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: 0.15s ease;
+}
+
+.app-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.25s ease;
+}
+
+/* ACTIVE ROUTE UI */
+.active-route {
+    border: 1px solid var(--accent) !important;
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.15);
+}
