@@ -93,7 +93,7 @@ body {
 }
 
 /* HEADER */
-.card-header {
+/* .card-header {
     background-image: linear-gradient(rgba(0, 71, 171, 0.9), rgba(0, 0, 0, 0.9)),
         url('../../public/images/disenyador-web.webp');
     background-size: cover;
@@ -101,6 +101,27 @@ body {
     height: 130px;
     position: relative;
     border-bottom: 2px solid #00D4FF;
+} */
+
+.card-header {
+    background: linear-gradient(135deg, #0047AB, #001f3f);
+    height: 160px;
+    position: relative;
+    border-bottom: none;
+}
+
+.profile-img-wrapper {
+    margin-top: 40px;
+}
+
+/* glow detrás de la foto */
+.profile-img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,212,255,0.4), transparent 70%);
+    z-index: 0;
 }
 
 .profile-img {
@@ -120,7 +141,7 @@ body {
 }
 
 .card-content {
-    padding: 75px 20px 20px 20px;
+    padding: 60px 20px 20px 20px;
     text-align: center;
     flex-grow: 1;
 
@@ -145,11 +166,10 @@ h1 {
 
 /* UTILITIES */
 .value-proposition {
-    margin: 1.3rem 0;
-    padding: 1rem;
-    border-left: 3px solid #3498db;
-    background: rgba(52, 152, 219, 0.05);
-    border-radius: 0 8px 8px 0;
+    background: white;
+    border: 1px solid #e6edf5;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-radius: 16px;
 }
 
 .value-proposition p {
