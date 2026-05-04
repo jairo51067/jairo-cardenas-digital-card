@@ -82,7 +82,7 @@ export function renderProjectsPage() {
                 </div>
 
                 <div class="conversion-block">
-                  <span class="mini-badge">Listo para usar</span>
+                  <span class="mini-badge">Catálogo</span>
                   <p class="conversion-title">¿Quieres implementar algo como esto en tu negocio?</p>
                   <p class="conversion-sub">Accede a herramientas listas para usar, validar y escalar.</p>
                   

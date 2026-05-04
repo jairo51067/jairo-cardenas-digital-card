@@ -61,7 +61,7 @@ export function renderProfile() {
 
         </div>
 
-        <!-- DASHBOARD -->
+        <!-- DASHBOARD --> 
         <nav class="dashboard-grid">
 
           <div class="badge-wrapper">
@@ -69,7 +69,7 @@ export function renderProfile() {
 
             <a href="#" id="btn-projects" data-route="projects" class="dash-btn">
               <i class="fa-solid fa-code"></i>
-              <span>Explorar soluciones</span>
+              <span>🚀 Explorar soluciones y catálogo</span>
             </a>
           </div>
 
