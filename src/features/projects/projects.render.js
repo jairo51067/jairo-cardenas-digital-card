@@ -81,16 +81,19 @@ export function renderProjectsPage() {
                     ${renderProjects()}
                 </div>
 
+                <div class="conversion-block">
+                  <span class="mini-badge">Listo para usar</span>
+                  <p class="conversion-title">¿Quieres implementar algo como esto en tu negocio?</p>
+                  <p class="conversion-sub">Accede a herramientas listas para usar, validar y escalar.</p>
+                  
+                  <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" target="_blank" class="btn-conversion">Explorar productos listos para usar <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
                 <div class="building-notice">
-                    <div class="building-header">
-                        <i class="fa-solid fa-rocket"></i>
+                    <div class="building-header"><i class="fa-solid fa-rocket"></i>
                     <span>En desarrollo</span>
                 </div>
-
-                    <p class="building-text">
-                        Actualmente estoy construyendo nuevas soluciones enfocadas en automatización, ventas y sistemas digitales.
-                    </p>
-
+                    <p class="building-text">Actualmente estoy construyendo nuevas soluciones enfocadas en automatización, ventas y sistemas digitales.</p>
                     <div class="building-tags">
                         <span>Automatización</span>
                         <span>AI Tools</span>
@@ -98,13 +101,7 @@ export function renderProjectsPage() {
                     </div>
                 </div>
 
-                <div class="explore-more-section">
-                    <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" 
-                       target="_blank" 
-                       class="btn-portfolio-full">
-                        Ver soluciones <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
+                
 
             </section>
 

@@ -11,7 +11,7 @@ html {
     touch-action: manipulation;
 }   
 
-/* Botón Volver */
+/* Botón Volver */ 
 .volver-btn,
 .nav-link,
 #btn-home {
@@ -403,4 +403,70 @@ html {
     border-radius: 20px;
     font-weight: 600;
     color: var(--primary-blue);
+}
+
+/* =========================
+   CONVERSION BLOCK (VENTA)
+========================= */
+
+.conversion-block {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+    border: 1px solid #dbeafe;
+}
+
+.conversion-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.conversion-sub {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* BOTÓN DE VENTA */
+.btn-conversion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, #0047AB, #002244);
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    box-shadow: 0 6px 18px rgba(0, 71, 171, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.btn-conversion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 71, 171, 0.35);
+}
+
+.mini-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    background: #22c55e;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-right: 70%;
 }
