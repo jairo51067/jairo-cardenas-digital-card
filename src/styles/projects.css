@@ -241,7 +241,8 @@ html {
 
 /* Asegura que projects-view use el padding correcto */
 .projects-view {
-    padding: 30px 20px;
+    height: 100dvh;
+    padding: 10px;
     text-align: left;
 }
 

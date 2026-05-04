@@ -5,8 +5,7 @@ export function renderProfile() {
   if (!container) return;
 
   container.innerHTML = `
-    <article class="card profile-elite">
-
+    <article class="card"> 
       <header class="card-header">
 
         <!-- NUEVO HERO VISUAL -->
