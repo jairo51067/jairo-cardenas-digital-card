@@ -138,15 +138,12 @@ export function renderAboutPage(lang = "es") {
 
         <!-- VALUE PROPOSITION -->
         <div class="value-elite reveal">
-
           <h3>¿Por qué trabajar conmigo?</h3>
-
           <p>
             Combino <strong>experiencia industrial real</strong> + 
             <strong>desarrollo de software moderno</strong>, lo que me permite entender 
             el problema desde el negocio y construir la solución desde la tecnología.
           </p>
-
         </div>
 
         <!-- QUOTE -->
@@ -154,9 +151,25 @@ export function renderAboutPage(lang = "es") {
           "${data.quote}"
         </blockquote>
 
+        <!-- CV --> 
+        <section class="cv-module"> 
+          <p class="section-title">CV / PROFILE</p>
+          <div class="cv-options">
+            <a href="src/assets/doc/Jairo_Cardenas_CV__es426.pdf" target="_blank" class="cv-link">ES</a>
+            <span class="sep">|</span>
+            <a href="src/assets/doc/Jairo_Cardenas_CV_en426.pdf" target="_blank" class="cv-link">EN</a>
+          </div>
+          <div class="security-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            <p>
+              Información técnica resumida. 
+              Contacto directo para detalles avanzados.
+            </p>
+          </div>
+        </section>
+
         <!-- CTA -->
         <footer class="about-footer reveal">
-
           <a href="#" id="btn-talk" class="btn-primary-about">
             ${data.btnContact}
           </a>

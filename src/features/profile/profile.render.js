@@ -90,17 +90,15 @@ export function renderProfile() {
           Soluciones diseñadas para negocio real • Sin complejidad técnica
         </p>
 
-        <!-- CV -->
-        <section class="cv-module">
-
+        <!-- CV Mostrado en AboutMe-->
+      <!--
+        <section class="cv-module"> 
           <p class="section-title">CV / PROFILE</p>
-
           <div class="cv-options">
             <a href="src/assets/doc/Jairo_Cardenas_CV__es426.pdf" target="_blank" class="cv-link">ES</a>
             <span class="sep">|</span>
             <a href="src/assets/doc/Jairo_Cardenas_CV_en426.pdf" target="_blank" class="cv-link">EN</a>
           </div>
-
           <div class="security-note">
             <i class="fa-solid fa-shield-halved"></i>
             <p>
@@ -108,8 +106,8 @@ export function renderProfile() {
               Contacto directo para detalles avanzados.
             </p>
           </div>
-
         </section>
+      -->
 
       </section>
 
@@ -121,7 +119,7 @@ export function renderProfile() {
     </article>
   `;
 
-  document.querySelectorAll("[data-route]").forEach(btn => {
+  document.querySelectorAll("[data-route]").forEach((btn) => {
     btn.onclick = (e) => {
       e.preventDefault();
       navigate(btn.dataset.route);

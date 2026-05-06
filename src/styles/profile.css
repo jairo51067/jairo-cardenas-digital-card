@@ -136,8 +136,7 @@
     transform: scale(1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   }
-}
-
+} 
 
 
 .badge-wrapper .dash-btn {
@@ -162,15 +161,19 @@
     letter-spacing: 0.5px;
 }
 
-/* Módulo CV */
+/* Módulo CV * Oculto para mostrar en AboutMe/
+
+/*
+
 .cv-module {
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: center;
     padding: 15px 15px 10px;
     background: var(--bg-light);
     border-radius: 15px;
     border: 1px solid #edf2f7;
 }
+
 
 .section-title {
     font-size: 0.65rem;
@@ -180,7 +183,7 @@
     font-weight: 700;
 }
 
-.cv-options {
+.cv-options { 
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -231,6 +234,8 @@
     opacity: 1;
     transition: 0.3s;
 }
+
+*/
 
 /* =========================
    PROFILE ELITE UI
@@ -310,20 +315,7 @@
     box-shadow: 0 10px 25px rgba(0, 71, 171, 0.25);
 }
 
-/* CV mejora */
-.cv-module {
-    margin-top: 20px;
-    background: #f8fafc;
-}
 
-.security-note {
-    opacity: 0.85;
-    transition: 0.3s;
-}
-
-.security-note:hover {
-    opacity: 1;
-}
 
 /* =========================
    PROFILE HERO PRO
@@ -331,7 +323,7 @@
 
 .profile-hero {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .profile-img-wrapper {

@@ -41,16 +41,7 @@ export function renderContactPage() {
             </div>
           </a>
 
-          <!-- GITHUB -->
-          <a href="https://github.com/jairo51067" target="_blank" class="contact-card github">
-            <i class="fa-brands fa-github"></i>
-            <div>
-              <span>GitHub</span>
-              <p>Proyectos reales</p>
-            </div>
-          </a>
-
-          <!-- LINKEDIN -->
+                   <!-- LINKEDIN -->
           <a href="https://www.linkedin.com/in/jairocardenas-dev-49b94b25" target="_blank" class="contact-card linkedin">
             <i class="fa-brands fa-linkedin"></i>
             <div>
@@ -59,7 +50,17 @@ export function renderContactPage() {
             </div>
           </a>
 
+                    <!-- GITHUB -->
+          <a href="https://github.com/jairo51067" target="_blank" class="contact-card github">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <span>GitHub</span>
+              <p>Proyectos reales</p>
+            </div>
+          </a>
         </div>
+
+        
 
         <!-- CTA -->
         <div class="contact-cta">
