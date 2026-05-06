@@ -106,7 +106,7 @@ export function renderProjectsPage() {
                   </a>
                   
                   <!-- Botón 2: Nueva landing de ventas (crearemos) -->
-                  <a href="https://jairo51067.github.io/saas-shop/" 
+                  <a href="https://jairo-cardenas-saas-shop.vercel.app/" 
                     target="_blank" 
                     class="btn-conversion dual-btn shop-btn">
                     <i class="fa-solid fa-cart-shopping"></i> Ver productos listos para vender
