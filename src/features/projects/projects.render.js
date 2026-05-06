@@ -81,6 +81,7 @@ export function renderProjectsPage() {
                     ${renderProjects()}
                 </div>
 
+              <!-- removido para dar paso a nuevo bloque de conversión más claro y directo -->
               <!--
                 <div class="conversion-block">
                   <span class="mini-badge">Catálogo</span>
@@ -94,6 +95,7 @@ export function renderProjectsPage() {
               <!-- NUEVO BLOQUE CON DOS OPCIONES PALPITANTES -->
               <div class="conversion-block-dual">
                 <span class="mini-badge">🎯 Elige tu camino</span>
+                 <p class="conversion-title">¿Quieres implementar algo como esto en tu negocio?</p>
                 
                 <div class="dual-buttons">
                   <!-- Botón 1: Portafolio profesional (ya existente) -->
