@@ -98,18 +98,18 @@ export function renderProjectsPage() {
                  <p class="conversion-title">¿Quieres implementar algo como esto en tu negocio?</p>
                 
                 <div class="dual-buttons">
-                  <!-- Botón 1: Portafolio profesional (ya existente) -->
-                  <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" 
-                    target="_blank" 
-                    class="btn-conversion dual-btn portfolio-btn">
-                    <i class="fa-solid fa-briefcase"></i> Ver portafolio profesional
-                  </a>
-                  
                   <!-- Botón 2: Nueva landing de ventas (crearemos) -->
                   <a href="https://jairo-cardenas-saas-shop.vercel.app/" 
                     target="_blank" 
                     class="btn-conversion dual-btn shop-btn">
                     <i class="fa-solid fa-cart-shopping"></i> Ver productos listos para vender
+                  </a> 
+                  
+                  <!-- Botón 1: Portafolio profesional (ya existente) -->
+                  <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" 
+                    target="_blank" 
+                    class="btn-conversion dual-btn portfolio-btn">
+                    <i class="fa-solid fa-briefcase"></i> Ver portafolio profesional
                   </a>
                 </div>
                 
