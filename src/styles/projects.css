@@ -523,3 +523,59 @@ html {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     }
 }
+
+
+/* BLOQUE DUAL */
+.conversion-block-dual {
+  margin-top: 24px;
+  padding: 24px 5px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+  text-align: center;
+  border: 1px solid #dbeafe;
+}
+
+.dual-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 12px 5px 12px;
+}
+
+.dual-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  padding: 10px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  animation: heartbeat 2.5s infinite ease-in-out;
+  transition: all 0.2s ease;
+}
+
+.portfolio-btn {
+  background: linear-gradient(135deg, #2c3e50, #1a2632);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.shop-btn {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  box-shadow: 0 6px 14px rgba(230,126,34,0.3);
+}
+
+.dual-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-3px) scale(1.02);
+}
+
+@media (min-width: 480px) {
+  .dual-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .dual-btn {
+    flex: 1;
+    max-width: 240px;
+  }
+}

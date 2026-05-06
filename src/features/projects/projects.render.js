@@ -81,6 +81,7 @@ export function renderProjectsPage() {
                     ${renderProjects()}
                 </div>
 
+              <!--
                 <div class="conversion-block">
                   <span class="mini-badge">Catálogo</span>
                   <p class="conversion-title">¿Quieres implementar algo como esto en tu negocio?</p>
@@ -88,6 +89,30 @@ export function renderProjectsPage() {
                   
                   <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" target="_blank" class="btn-conversion">Explorar productos listos para usar <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
+              -->
+
+              <!-- NUEVO BLOQUE CON DOS OPCIONES PALPITANTES -->
+              <div class="conversion-block-dual">
+                <span class="mini-badge">🎯 Elige tu camino</span>
+                
+                <div class="dual-buttons">
+                  <!-- Botón 1: Portafolio profesional (ya existente) -->
+                  <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" 
+                    target="_blank" 
+                    class="btn-conversion dual-btn portfolio-btn">
+                    <i class="fa-solid fa-briefcase"></i> Ver portafolio profesional
+                  </a>
+                  
+                  <!-- Botón 2: Nueva landing de ventas (crearemos) -->
+                  <a href="https://jairo51067.github.io/saas-shop/" 
+                    target="_blank" 
+                    class="btn-conversion dual-btn shop-btn">
+                    <i class="fa-solid fa-cart-shopping"></i> Ver productos listos para vender
+                  </a>
+                </div>
+                
+                <p class="conversion-sub">¿Prefieres ver mi experiencia o ir directo a soluciones que puedes comprar hoy?</p>
+              </div>
                 
                 <div class="building-notice">
                     <div class="building-header"><i class="fa-solid fa-rocket"></i>

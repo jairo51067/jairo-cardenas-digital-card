@@ -20,10 +20,10 @@ export function renderProfile() {
 
       </header>
 
-      <section class="card-content">
+      <section class="card-content"> 
 
         <!-- IDENTIDAD -->
-        <h1 class="hero-title">Jairo Cárdenas</h1>
+        <h1 class="hero-title">Jairo Cárdenas</h1> 
 
          <div class="profile-badge">
             Product Builder • SaaS Developer
