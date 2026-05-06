@@ -104,7 +104,7 @@ export function renderProjectsPage() {
                     class="btn-conversion dual-btn shop-btn">
                     <i class="fa-solid fa-cart-shopping"></i> Ver productos listos para vender
                   </a> 
-                  
+
                   <!-- Botón 1: Portafolio profesional (ya existente) -->
                   <a href="https://jairo51067.github.io/jairo-cardenas-dev-portfolio/" 
                     target="_blank" 
